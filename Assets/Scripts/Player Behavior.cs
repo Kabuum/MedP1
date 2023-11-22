@@ -43,14 +43,14 @@ public class PlayerBehavior : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D Coll)
     {
-        if (Input.GetKeyDown(KeyCode.E) && Coll.gameObject.CompareTag("Item1"))
+        if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Item1"))
         {
             Destroy (Coll.gameObject);
             ItemPickup = true;
             Debug.Log("Item Up Picked");
             DestroyComponent();
         }
-        if (Input.GetKeyDown(KeyCode.E)&& Coll.gameObject.CompareTag("Hiding Range"))
+        if (Input.GetKey(KeyCode.E)&& Coll.gameObject.CompareTag("Hiding Range"))
         {
             Hidden = true;
             myColor = new Color(1f, 1f, 1f, 0.2f);
