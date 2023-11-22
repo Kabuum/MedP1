@@ -6,11 +6,14 @@ public class PlayerBehavior : MonoBehaviour
 {
     public float speed;
     bool ItemPickup = false;
-    //public GameObject door;
+    bool Hidden;
+    public GameObject door;
+    public Color myColor;
+    public Renderer Renderer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Renderer = gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -18,7 +21,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("works A");
+          
             this.transform.Translate(-speed, 0f, 0f);
 
         }
@@ -44,13 +47,30 @@ public class PlayerBehavior : MonoBehaviour
             Destroy (Coll.gameObject);
             ItemPickup = true;
             Debug.Log("Item Up Picked");
-           // DestroyComponent();
+            DestroyComponent();
+        }
+        if (Coll.gameObject.CompareTag("Hiding Range") && Input.GetKeyDown(KeyCode.E))
+        {
+            Hidden = true;
+            myColor = new Color(1f, 1f, 1f, 0.2f);
+            Debug.Log("Hidden");
+            Renderer.material.color = myColor;
         }
     }
-    /*void DestroyComponent()
+    private void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("Hiding Range") && Hidden == true)
+        {
+            Hidden = false;
+            Debug.Log("Not Hidden");
+            myColor = new Color(1f, 1f, 1f, 1f);
+            Renderer.material.color = myColor;
+        }
+    }
+    void DestroyComponent()
     {
         Destroy(door.GetComponent<BoxCollider2D>());
         Debug.Log("Door Open");
     }
-    */
+    
 }
