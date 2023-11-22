@@ -6,6 +6,7 @@ public class PlayerBehavior : MonoBehaviour
 {
     public float speed;
     bool ItemPickup = false;
+    //public GameObject door;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,22 +18,23 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(-speed, 0f, 0f);
+            Debug.Log("works A");
+            this.transform.Translate(-speed, 0f, 0f);
 
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(speed, 0f, 0f);
+            this.transform.Translate(speed, 0f, 0f);
 
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(0.0f, -speed, 0);
+            this.transform.Translate(0.0f, -speed, 0);
 
         }
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(0.0f, speed, 0f);
+            this.transform.Translate(0.0f, speed, 0f);
         }
     }
     private void OnTriggerStay2D(Collider2D Coll)
@@ -42,6 +44,13 @@ public class PlayerBehavior : MonoBehaviour
             Destroy (Coll.gameObject);
             ItemPickup = true;
             Debug.Log("Item Up Picked");
+           // DestroyComponent();
         }
     }
+    /*void DestroyComponent()
+    {
+        Destroy(door.GetComponent<BoxCollider2D>());
+        Debug.Log("Door Open");
+    }
+    */
 }
