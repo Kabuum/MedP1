@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item1
+  - Hiding Spots
+  - Hiding Range
   layers:
   - Default
   - TransparentFX
