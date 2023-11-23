@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     public float speed;
-    bool ItemPickup = false;
+    bool InteractKey = false;
     bool Hidden;
     public GameObject door;
     public Color myColor;
@@ -39,6 +39,17 @@ public class PlayerBehavior : MonoBehaviour
         {
             this.transform.Translate(0.0f, speed, 0f);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractKey = true;
+            Debug.Log("R");
+        }
+        else
+        {
+            InteractKey = false;
+            
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,14 +66,22 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D Coll)
     {
-        if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Item1"))
+        if (InteractKey == true && Coll.gameObject.CompareTag("Item1"))
         {
+<<<<<<< Updated upstream
             Destroy(Coll.gameObject);
             ItemPickup = true;
             Debug.Log("Item Up Picked");
             DestroyComponent();
         }
         if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Hiding Range"))
+=======
+            Destroy (Coll.gameObject);
+            Debug.Log("Item Up Picked");
+            DestroyComponent();
+        }
+        if (InteractKey == true && Coll.gameObject.CompareTag("Hiding Range"))
+>>>>>>> Stashed changes
         {
             Hidden = true;
             myColor = new Color(1f, 1f, 1f, 0.2f);
