@@ -21,7 +21,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-          
+
             this.transform.Translate(-speed, 0f, 0f);
 
         }
@@ -40,17 +40,29 @@ public class PlayerBehavior : MonoBehaviour
             this.transform.Translate(0.0f, speed, 0f);
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Yamamba"))
+
+            {
+
+            SceneManager.RestartScene();
+
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D Coll)
     {
         if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Item1"))
         {
-            Destroy (Coll.gameObject);
+            Destroy(Coll.gameObject);
             ItemPickup = true;
             Debug.Log("Item Up Picked");
             DestroyComponent();
         }
-        if (Input.GetKey(KeyCode.E)&& Coll.gameObject.CompareTag("Hiding Range"))
+        if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Hiding Range"))
         {
             Hidden = true;
             myColor = new Color(1f, 1f, 1f, 0.2f);
@@ -72,6 +84,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         Destroy(door.GetComponent<BoxCollider2D>());
         Debug.Log("Door Open");
+
     }
-    
+
 }
