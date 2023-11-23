@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
     public float speed;
-    bool ItemPickup = false;
+    bool InteractKey = false;
     bool Hidden;
     public GameObject door;
     public Color myColor;
     public Renderer Renderer;
+    bool PickUpAble;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,8 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float ElapsedTime = 0;
+        float WaitTime = 0.5f;
         if (Input.GetKey(KeyCode.A))
         {
 
@@ -39,6 +45,19 @@ public class PlayerBehavior : MonoBehaviour
         {
             this.transform.Translate(0.0f, speed, 0f);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractKey = true;
+            ElapsedTime = 0f;
+        }
+        if(WaitTime > ElapsedTime)
+        {
+            ElapsedTime += Time.deltaTime;
+        }
+        else
+        {
+            InteractKey = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,18 +70,19 @@ public class PlayerBehavior : MonoBehaviour
             SceneManager.RestartScene();
 
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D Coll)
     {
-        if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Item1"))
+        PickUpAble = true;
+        if (InteractKey == true && Coll.gameObject.CompareTag("Item1"))
         {
             Destroy(Coll.gameObject);
-            ItemPickup = true;
             Debug.Log("Item Up Picked");
             DestroyComponent();
         }
-        if (Input.GetKey(KeyCode.E) && Coll.gameObject.CompareTag("Hiding Range"))
+        if (InteractKey == true && Coll.gameObject.CompareTag("Hiding Range"))
         {
             Hidden = true;
             myColor = new Color(1f, 1f, 1f, 0.2f);
@@ -86,5 +106,4 @@ public class PlayerBehavior : MonoBehaviour
         Debug.Log("Door Open");
 
     }
-
 }
