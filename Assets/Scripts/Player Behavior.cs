@@ -11,9 +11,10 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject door;
     public Color myColor;
     public Renderer Renderer;
-    bool PickUpAble;
-    
-    
+    float ElapsedTime = 0;
+    float WaitTime = 0.5f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,7 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float ElapsedTime = 0;
-        float WaitTime = 0.5f;
+        
         if (Input.GetKey(KeyCode.A))
         {
 
@@ -75,7 +75,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D Coll)
     {
-        PickUpAble = true;
+       
         if (InteractKey == true && Coll.gameObject.CompareTag("Item1"))
         {
             Destroy(Coll.gameObject);
