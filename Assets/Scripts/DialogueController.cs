@@ -18,7 +18,8 @@ public class DialogueController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ShowDialougue("gay");
+
+        ShowDialougue("Du er pisse klam at se på. Gå din vej dig", 10);
     }
 
     // Update is called once per frame
@@ -28,28 +29,33 @@ public class DialogueController : MonoBehaviour
     }
     public void ShowDialougue(string text, int maxChar)
     {
-        string a = "du grim";
-        string[] words = a.Split(" ");
-        char[] b = a.ToCharArray();
-        foreach (string c in words)
-        {  
-            if (textTmp.text.Length + c.Length <= maxChar)
+        textTmp.text = "";
+        string[] words = text.Split(" ");
+        foreach (string word in words)
+        {
+            if (textTmp.text.Length + word.Length <= maxChar)
             {
-                textTmp.text = textTmp.text + " " + c;
+                char[] chars = word.ToCharArray();
+                foreach (char c in chars)
+                {
+                    textTmp.text = textTmp.text + c;
+                }
+                textTmp.text += " ";
             }
-       
+            if (textTmp.text.Length > maxChar)
+            {
+                StartCoroutine(WaitForKey(KeyCode.Space));
+                textTmp.text = "";
+                continue;
+               
+            }
+           
         }
-        textTmp.maxVisibleCharacters = 5;
+        //textTmp.maxVisibleCharacters = 5;
 
         //figure out length of next word. + space
 
-        if (textTmp.text.Length + 3 >= maxChar)
-        {
-
-        }
-      
-
-        textTmp.maxVisibleLines = 2;
+        //        textTmp.maxVisibleLines = 2;
         //check next word lenght
 
         //check how many charcters inside box. //Figure out how many chars fit inside box.
@@ -57,5 +63,11 @@ public class DialogueController : MonoBehaviour
 
 
 
+    }
+
+    IEnumerator WaitForKey(KeyCode key)
+    {
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+       
     }
 }
