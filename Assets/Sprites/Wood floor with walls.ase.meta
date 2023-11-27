@@ -32,7 +32,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 0
+    spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 32
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638361735794663198
+  platformSettingsDirtyTick: 638366836357288151
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 96
       height: 96
-    spriteID: 29f2b1366521aa34983cc0ff9f19179b
+    spriteID: 36befcefd2e9c57469642d65e058d6e8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -155,7 +155,7 @@ ScriptedImporter:
         y: 0
         width: 96
         height: 96
-      spriteId: 29f2b1366521aa34983cc0ff9f19179b
+      spriteId: 36befcefd2e9c57469642d65e058d6e8
     linkedCells: []
     parentIndex: -1
   platformSettings:
