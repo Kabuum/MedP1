@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBack: {fileID: 0}
-  text: {fileID: 0}
+  textTmp: {fileID: 108117474}
 --- !u!4 &337123156
 Transform:
   m_ObjectHideFlags: 0
