@@ -9,10 +9,11 @@ public class PlayerBehavior : MonoBehaviour
     bool InteractKey = false;
     bool Hidden;
     public GameObject door;
-    public Color myColor;
-    public Renderer Renderer;
+    private Color myColor;
+    private Renderer Renderer;
     float ElapsedTime = 0;
     float WaitTime = 0.5f;
+    private float deltaspeed;
 
 
     // Start is called before the first frame update
@@ -24,26 +25,26 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        deltaspeed = speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.A))
         {
 
-            this.transform.Translate(-speed, 0f, 0f);
+            this.transform.Translate(-deltaspeed, 0f, 0f);
 
         }
         if (Input.GetKey(KeyCode.D))
         {
-            this.transform.Translate(speed, 0f, 0f);
+            this.transform.Translate(deltaspeed, 0f, 0f);
 
         }
         if (Input.GetKey(KeyCode.S))
         {
-            this.transform.Translate(0.0f, -speed, 0);
+            this.transform.Translate(0.0f, -deltaspeed, 0);
 
         }
         if (Input.GetKey(KeyCode.W))
         {
-            this.transform.Translate(0.0f, speed, 0f);
+            this.transform.Translate(0.0f, deltaspeed, 0f);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
