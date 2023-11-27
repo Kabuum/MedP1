@@ -44,7 +44,7 @@ public class DialogueController : MonoBehaviour
             }
             else if (textTmp.text.Length > maxChar)
             {
-                StartCoroutine(WaitForKey(KeyCode.Space));
+                Wait(6);
                 textTmp.text = "";
                 continue;
             }
@@ -63,9 +63,8 @@ public class DialogueController : MonoBehaviour
 
     }
 
-    IEnumerator WaitForKey(KeyCode key)
+    IEnumerator Wait(int seconds)
     {
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-
+        yield return new WaitForSeconds(seconds);
     }
 }
