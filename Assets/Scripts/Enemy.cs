@@ -8,10 +8,11 @@ public class Enemy : MonoBehaviour
     Vector3 target;
     [SerializeField] Transform[] Waypoints;
     private NavMeshAgent agent;
-    private float Movespeed = 1;
     public bool PlayerSpotted;
     [SerializeField] Transform Player;
     private int WaypointIndex;
+    public float runspeed = 1f;
+    public float walkspeed = 0.5f;
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        agent.speed = Movespeed;
+        agent.speed = walkspeed;
     }
 
     // Update is called once per frame
@@ -54,15 +55,13 @@ public class Enemy : MonoBehaviour
     {
         if (PlayerSpotted)
         {
-            Movespeed = 1;
-            agent.speed = Movespeed;
+            agent.speed = runspeed;
             target = Player.position;
             agent.SetDestination(target);
         }
         else
         {
-            Movespeed = 0.5f;
-            agent.speed = Movespeed;
+            agent.speed = walkspeed;
             target = Waypoints[WaypointIndex].position;
             agent.SetDestination(target);
         }
