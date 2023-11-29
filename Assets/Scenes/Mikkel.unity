@@ -255,8 +255,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 18d101fe75354a645826be8568fbedbb, type: 2}
-  m_sharedMaterial: {fileID: -101301281955105281, guid: 18d101fe75354a645826be8568fbedbb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 67339a8231ab1ec4caa476e4207f7df1, type: 2}
+  m_sharedMaterial: {fileID: -1454928350162406571, guid: 67339a8231ab1ec4caa476e4207f7df1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBack: {fileID: 0}
   textSpeech: {fileID: 548908092}
-  text: Welcome to YAMAMA CAME. DU LUGTER AF LORT MEGA MEGET
+  text: "FUCK DU LUGTER MEGET AF LORT DIN B\xD8VS"
   maxChar: 98
   charDelay: 0.15
 --- !u!1660057539 &9223372036854775807
