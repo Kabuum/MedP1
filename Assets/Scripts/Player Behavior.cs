@@ -15,6 +15,7 @@ public class PlayerBehavior : MonoBehaviour
     float ElapsedTime = 0;
     float WaitTime = 0.5f;
     private float deltaspeed;
+    private Animator PlayerAnimator;
 
     public UnityEvent openDoor;
 
@@ -22,7 +23,8 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Renderer = gameObject.GetComponent<Renderer>();
+        PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
+        Renderer = this.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -31,23 +33,27 @@ public class PlayerBehavior : MonoBehaviour
         deltaspeed = speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.A))
         {
-
+            PlayerAnimator.Play("Priest-Walk-Left");
             this.transform.Translate(-deltaspeed, 0f, 0f);
-
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
+            PlayerAnimator.Play("Priest-Walk-Right");
             this.transform.Translate(deltaspeed, 0f, 0f);
-
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
+            PlayerAnimator.Play("Priest-Walk-Down");
             this.transform.Translate(0.0f, -deltaspeed, 0);
-
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
+            PlayerAnimator.Play("Priest-Walk-Up");
             this.transform.Translate(0.0f, deltaspeed, 0f);
+        }
+        else
+        {
+            //animator parameter Moving = false;
         }
         if (Input.GetKeyDown(KeyCode.E))
         {

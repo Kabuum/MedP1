@@ -7,6 +7,7 @@ TagManager:
   - Doors
   - Yamamba
   - HidingRange
+  - Staircase
   layers:
   - Default
   - TransparentFX
