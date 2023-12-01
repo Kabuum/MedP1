@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
+
 
 public class TileEraser : MonoBehaviour
 {
-    public Tilemap door;
-    public TileBase tile;
-
-    Vector3Int oldTilePos;
-    public Vector3Int offset;
+    [Tooltip("Tilemap containig only doors must be added from the scene")]
+    public Tilemap doorTileMap;
 
     public void OpenDoor()
     {
@@ -18,11 +18,17 @@ public class TileEraser : MonoBehaviour
     }
     public IEnumerator OpenDoor(float seconds)
     {
-        var tilePos = door.WorldToCell(transform.position);
-        oldTilePos = tilePos;
-        door.SetTile(tilePos, null);
-        yield return new WaitForSeconds(seconds);
-        door.SetTile(oldTilePos, tile);
+        Vector3Int tilePos = doorTileMap.WorldToCell(transform.position);
+        if (doorTileMap.HasTile(tilePos) != false)
+        {
+            Vector3Int oldTilePos;
+            oldTilePos = tilePos;
+            TileBase oldTile = doorTileMap.GetTile(tilePos);
+            doorTileMap.SetTile(tilePos, null);
+            yield return new WaitForSeconds(seconds);
+            doorTileMap.SetTile(oldTilePos, oldTile); 
+        }
+        yield break;
     }
 
 }
