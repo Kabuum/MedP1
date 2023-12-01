@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class Enemy : MonoBehaviour
     private Animator EnemyAnimator;
     private bool Monster = false;
     public bool Lantern = false;
+
+    public UnityEvent openDoor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +50,7 @@ public class Enemy : MonoBehaviour
         {
             DestinationUpdate();
         }
-        
+
         Vector3 AgentVel = agent.velocity;
         if (MathF.Abs(AgentVel.x) > MathF.Abs(AgentVel.y)) // left and right
         {
@@ -70,9 +74,9 @@ public class Enemy : MonoBehaviour
                 DirectionIndex = 4;// 4 is down
             }
         }
-        EnemyAnim(DirectionIndex,Lantern,Monster);
+        EnemyAnim(DirectionIndex, Lantern, Monster);
     }
-    
+
     void NextWaypoint()
     {
         WaypointIndex++;
@@ -81,7 +85,6 @@ public class Enemy : MonoBehaviour
             WaypointIndex = 0;
         }
     }
-
     private void DestinationUpdate()
     {
         if (PlayerSpotted)
@@ -103,18 +106,18 @@ public class Enemy : MonoBehaviour
         if (Monster)
         {
             switch (direction)
-            { 
+            {
                 case 1:
-                    
+
                     break;
                 case 2:
-                    
+
                     break;
                 case 3:
-                    
+
                     break;
                 case 4:
-                    
+
                     break;
             }
         }
@@ -139,7 +142,7 @@ public class Enemy : MonoBehaviour
         else
         {
             switch (direction)
-            { 
+            {
                 case 1:
                     EnemyAnimator.Play("OlLady-Walk-Right");
                     break;
@@ -153,6 +156,14 @@ public class Enemy : MonoBehaviour
                     EnemyAnimator.Play("OlLady-Walk-Down");
                     break;
             }
+        }
+    }
+    private void OnTriggerStay2D(Collider2D Coll)
+    {
+        if (Coll.gameObject.CompareTag("Doors"))
+        {
+            Debug.Log("hello");
+            openDoor.Invoke();
         }
     }
 }
