@@ -15,8 +15,9 @@ public class Enemy : MonoBehaviour
     public float runspeed = 1f;
     public float walkspeed = 0.5f;
     private int DirectionIndex = 0;
-
     private Animator EnemyAnimator;
+    private bool Monster = false;
+    public bool Lantern = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +46,7 @@ public class Enemy : MonoBehaviour
         {
             DestinationUpdate();
         }
-
+        
         Vector3 AgentVel = agent.velocity;
         if (MathF.Abs(AgentVel.x) > MathF.Abs(AgentVel.y)) // left and right
         {
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
                 DirectionIndex = 2;// 2 is left
             }
         }
-        else //up and down
+        else//up and down
         {
             if (AgentVel.y >= 0)//up
             {
@@ -69,7 +70,9 @@ public class Enemy : MonoBehaviour
                 DirectionIndex = 4;// 4 is down
             }
         }
+        EnemyAnim(DirectionIndex,Lantern,Monster);
     }
+    
     void NextWaypoint()
     {
         WaypointIndex++;
@@ -92,6 +95,64 @@ public class Enemy : MonoBehaviour
             agent.speed = walkspeed;
             target = Waypoints[WaypointIndex].position;
             agent.SetDestination(target);
+        }
+    }
+
+    void EnemyAnim(int direction, bool isLantern, bool isMonster)
+    {
+        if (Monster)
+        {
+            switch (direction)
+            { 
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    
+                    break;
+            }
+        }
+        else if (Lantern)
+        {
+            switch (direction)
+            {
+                case 1:
+                    EnemyAnimator.Play("OlLadyLantern-Walk-Right");
+                    break;
+                case 2:
+                    EnemyAnimator.Play("OlLadyLantern-Walk-Left");
+                    break;
+                case 3:
+                    EnemyAnimator.Play("OlLadyLantern-Walk-Up");
+                    break;
+                case 4:
+                    EnemyAnimator.Play("OlLadyLantern-Walk-Down");
+                    break;
+            }
+        }
+        else
+        {
+            switch (direction)
+            { 
+                case 1:
+                    EnemyAnimator.Play("OlLady-Walk-Right");
+                    break;
+                case 2:
+                    EnemyAnimator.Play("OlLady-Walk-Left");
+                    break;
+                case 3:
+                    EnemyAnimator.Play("OlLady-Walk-Up");
+                    break;
+                case 4:
+                    EnemyAnimator.Play("OlLady-Walk-Down");
+                    break;
+            }
         }
     }
 }
