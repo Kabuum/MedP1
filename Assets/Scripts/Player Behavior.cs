@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -14,12 +15,16 @@ public class PlayerBehavior : MonoBehaviour
     float ElapsedTime = 0;
     float WaitTime = 0.5f;
     private float deltaspeed;
+    private Animator PlayerAnimator;
+
+    public UnityEvent openDoor;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Renderer = gameObject.GetComponent<Renderer>();
+        PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
+        Renderer = this.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -28,30 +33,34 @@ public class PlayerBehavior : MonoBehaviour
         deltaspeed = speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.A))
         {
-
+            PlayerAnimator.Play("Priest-Walk-Left");
             this.transform.Translate(-deltaspeed, 0f, 0f);
-
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
+            PlayerAnimator.Play("Priest-Walk-Right");
             this.transform.Translate(deltaspeed, 0f, 0f);
-
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
+            PlayerAnimator.Play("Priest-Walk-Down");
             this.transform.Translate(0.0f, -deltaspeed, 0);
-
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
+            PlayerAnimator.Play("Priest-Walk-Up");
             this.transform.Translate(0.0f, deltaspeed, 0f);
+        }
+        else
+        {
+            //animator parameter Moving = false;
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             InteractKey = true;
             ElapsedTime = 0f;
         }
-        if(WaitTime > ElapsedTime)
+        if (WaitTime > ElapsedTime)
         {
             ElapsedTime += Time.deltaTime;
         }
@@ -66,15 +75,16 @@ public class PlayerBehavior : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Yamamba"))
 
-            {
-                SceneManager.RestartScene(); 
-            }
+        {
+            SceneManager.RestartScene();
+        }
+
 
     }
 
     private void OnTriggerStay2D(Collider2D Coll)
     {
-       
+
         if (InteractKey == true && Coll.gameObject.CompareTag("Item1"))
         {
             Destroy(Coll.gameObject);
@@ -88,10 +98,17 @@ public class PlayerBehavior : MonoBehaviour
             Debug.Log("Hidden");
             Renderer.material.color = myColor;
         }
+        if (Coll.gameObject.CompareTag("Doors"))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                openDoor.Invoke();
+            }
+        }
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("Hiding Range") && Hidden == true)
+        if (coll.gameObject.CompareTag("HidingRange") && Hidden == true)
         {
             Hidden = false;
             Debug.Log("Not Hidden");
