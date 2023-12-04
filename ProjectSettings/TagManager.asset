@@ -8,6 +8,8 @@ TagManager:
   - Yamamba
   - HidingRange
   - Staircase
+  - Hiding Range
+  - Item1
   layers:
   - Default
   - TransparentFX

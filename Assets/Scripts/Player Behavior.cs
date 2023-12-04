@@ -95,7 +95,7 @@ public class PlayerBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Yamamba"))
 
         {
-            SceneManager.RestartScene();
+            SceneMangment.RestartScene();
         }
     }
 
