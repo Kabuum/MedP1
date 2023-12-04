@@ -12,6 +12,7 @@ public class AudioController : MonoBehaviour
     private AudioClip Current;
     public GameObject player;
     public GameObject Yamamba;
+    public bool ActivateMusic;
     int ClipIndex = 4;
     // Start is called before the first frame update
     void Start()
@@ -43,39 +44,48 @@ public class AudioController : MonoBehaviour
         }
     }
 
+    public void activatemusic()
+    {
+        ActivateMusic = true;
+        StartCoroutine(ClipPlayer());
+    }
+
     IEnumerator ClipPlayer()
     {
-        if (ClipIndex == 1)
+        if (ActivateMusic)
         {
-            Audio.clip = Close;
-            Audio.PlayOneShot(Audio.clip);
-            yield return new WaitForSeconds(Audio.clip.length);
-            StartCoroutine(ClipPlayer());
-            yield break;
-        }
-        else if (ClipIndex == 2)
-        {
-            Audio.clip = Closer;
-            Audio.PlayOneShot(Audio.clip);
-            yield return new WaitForSeconds(Audio.clip.length);
-            StartCoroutine(ClipPlayer());
-            yield break;
-        }
-        else if (ClipIndex == 3)
-        {
-            Audio.clip = Chase;
-            Audio.PlayOneShot(Audio.clip);
-            yield return new WaitForSeconds(Audio.clip.length);
-            StartCoroutine(ClipPlayer());
-            yield break;
-        }
-        else
-        {
-            Audio.clip = Far;
-            Audio.PlayOneShot(Audio.clip);
-            yield return new WaitForSeconds(Audio.clip.length);
-            StartCoroutine(ClipPlayer());
-            yield break;
+            if (ClipIndex == 1)
+            {
+                Audio.clip = Close;
+                Audio.PlayOneShot(Audio.clip);
+                yield return new WaitForSeconds(Audio.clip.length);
+                StartCoroutine(ClipPlayer());
+                yield break;
+            }
+            else if (ClipIndex == 2)
+            {
+                Audio.clip = Closer;
+                Audio.PlayOneShot(Audio.clip);
+                yield return new WaitForSeconds(Audio.clip.length);
+                StartCoroutine(ClipPlayer());
+                yield break;
+            }
+            else if (ClipIndex == 3)
+            {
+                Audio.clip = Chase;
+                Audio.PlayOneShot(Audio.clip);
+                yield return new WaitForSeconds(Audio.clip.length);
+                StartCoroutine(ClipPlayer());
+                yield break;
+            }
+            else
+            {
+                Audio.clip = Far;
+                Audio.PlayOneShot(Audio.clip);
+                yield return new WaitForSeconds(Audio.clip.length);
+                StartCoroutine(ClipPlayer());
+                yield break;
+            }
         }
     }
 }

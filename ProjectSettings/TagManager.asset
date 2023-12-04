@@ -10,6 +10,7 @@ TagManager:
   - Staircase
   - Hiding Range
   - Item1
+  - Billboard
   layers:
   - Default
   - TransparentFX

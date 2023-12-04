@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,6 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     public bool lantern = false;
     private bool moving = false;
     public UnityEvent openDoor;
+    public GameObject ESprite;
+    private Collider2D Interactable;
 
 
     // Start is called before the first frame update
@@ -89,39 +93,64 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void interact()
     {
+        if (Interactable.CompareTag("Billboard"))
+        {
+            
+        }
+        else if (Interactable.CompareTag("Key1"))
+        {
+            
+        }
+        else if (Interactable.CompareTag("Key2"))
+        {
+            
+        }
+        else if (Interactable.CompareTag("Crowbar"))
+        {
+            
+        }
+        else if (Interactable.CompareTag("Hiding Range"))
+        {
+            
+        }
+    }
 
-        if (collision.gameObject.CompareTag("Yamamba"))
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("Billboard"))
+        {
+            ESprite.SetActive(true);
+            coll = Interactable;
+        }
+        else if (coll.gameObject.CompareTag("Yamamba"))
 
         {
             SceneMangment.RestartScene();
         }
     }
-
-    private void OnTriggerStay2D(Collider2D Coll)
+    
+    private void OnTriggerStay2D(Collider2D coll)
     {
-
-        if (InteractKey == true && Coll.gameObject.CompareTag("Item1"))
-        {
-            Destroy(Coll.gameObject);
-            Debug.Log("Item Up Picked");
-            DestroyComponent();
-        }
-        if (InteractKey == true && Coll.gameObject.CompareTag("Hiding Range"))
+        if (InteractKey == true && coll.gameObject.CompareTag("Hiding Range"))
         {
             Hidden = true;
             myColor = new Color(1f, 1f, 1f, 0.2f);
             Debug.Log("Hidden");
             Renderer.material.color = myColor;
         }
-        if (InteractKey == true && Coll.gameObject.CompareTag("Doors"))
+        if (InteractKey == true && coll.gameObject.CompareTag("Doors"))
         {
             openDoor.Invoke();
         }
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Billboard"))
+        {
+            Interactable = null;
+        }
         if (coll.gameObject.CompareTag("HidingRange") && Hidden == true)
         {
             Hidden = false;
