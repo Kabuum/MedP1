@@ -16,14 +16,26 @@ public class DialogueController : MonoBehaviour
 
     public Event DialogueEvent;
     public GameObject textBack;
+    public GameObject spacebar;
+    public GameObject dialogField;
     public TMP_Text textSpeech;
 
     public string text;
     public int maxChar;
     public float charDelay;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        dialogField.SetActive(false);
+        OpenDialog(text);
+        
+    }
+    public void OpenDialog(string text)
+    {
+        dialogField.SetActive(true);
+        spacebar.SetActive(false);
         StartCoroutine(ShowDialogue(KeyCode.Space, text, maxChar));
     }
     public IEnumerator ShowDialogue(KeyCode key, string text, int maxChar)
@@ -31,7 +43,6 @@ public class DialogueController : MonoBehaviour
         int i = 0;
         textSpeech.text = "";
         string[] words = text.Split(" ");
-
         for (i = 0; i < words.Length; i++)
         {
             Debug.Log(words[i]);
@@ -40,7 +51,6 @@ public class DialogueController : MonoBehaviour
                 char[] chars = words[i].ToCharArray();
                 foreach (char c in chars)
                 {
-
                     textSpeech.text = textSpeech.text + c.ToString(); ;
                     yield return new WaitForSeconds(charDelay);
                 }
@@ -48,11 +58,17 @@ public class DialogueController : MonoBehaviour
             }
             else if (textSpeech.text.Length + words[i].Length > maxChar)
             {
+                spacebar.SetActive(true);
                 yield return new WaitUntil(() => Input.GetKeyDown(key));
                 textSpeech.text = "";
                 i--;
+                spacebar.SetActive(false);
             }
         }
+        spacebar.SetActive(true);
+        yield return new WaitUntil(() => Input.GetKeyDown(key));
+        dialogField.SetActive(false);
+
     }
 }
 
