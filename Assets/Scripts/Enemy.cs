@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
 
     public UnityEvent openDoor;
 
+    public DetectionTriangle triScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerSpotted = triScript.CheckInSight();
+
         if (Vector3.Distance(transform.position, target) < 0.5f && !PlayerSpotted)
         {
             NextWaypoint();
@@ -127,15 +131,19 @@ public class Enemy : MonoBehaviour
             {
                 case 1:
                     EnemyAnimator.Play("OlLadyLantern-Walk-Right");
+                    triScript.UpdateDetectionAngle(90);
                     break;
                 case 2:
                     EnemyAnimator.Play("OlLadyLantern-Walk-Left");
+                    triScript.UpdateDetectionAngle(270);
                     break;
                 case 3:
                     EnemyAnimator.Play("OlLadyLantern-Walk-Up");
+                    triScript.UpdateDetectionAngle(180);
                     break;
                 case 4:
                     EnemyAnimator.Play("OlLadyLantern-Walk-Down");
+                    triScript.UpdateDetectionAngle(0);
                     break;
             }
         }
@@ -145,15 +153,19 @@ public class Enemy : MonoBehaviour
             {
                 case 1:
                     EnemyAnimator.Play("OlLady-Walk-Right");
+                    triScript.UpdateDetectionAngle(90);
                     break;
                 case 2:
                     EnemyAnimator.Play("OlLady-Walk-Left");
+                    triScript.UpdateDetectionAngle(270);
                     break;
                 case 3:
                     EnemyAnimator.Play("OlLady-Walk-Up");
+                    triScript.UpdateDetectionAngle(180);
                     break;
                 case 4:
                     EnemyAnimator.Play("OlLady-Walk-Down");
+                    triScript.UpdateDetectionAngle(0);
                     break;
             }
         }
@@ -162,7 +174,6 @@ public class Enemy : MonoBehaviour
     {
         if (Coll.gameObject.CompareTag("Doors"))
         {
-            Debug.Log("hello");
             openDoor.Invoke();
         }
     }
