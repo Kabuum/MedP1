@@ -11,6 +11,9 @@ TagManager:
   - Hiding Range
   - Item1
   - Billboard
+  - Key1
+  - Key2
+  - Crowbar
   layers:
   - Default
   - TransparentFX

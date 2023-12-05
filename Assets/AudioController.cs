@@ -18,8 +18,6 @@ public class AudioController : MonoBehaviour
     void Start()
     {
         Audio = this.GetComponent<AudioSource>();
-        Audio.clip = Far;
-        Audio.Play();
         StartCoroutine(ClipPlayer());
     }
 
