@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ol lady - 3_Frame_0
+  - name: Old lady, Yamauba_Frame_0
     originalName: 
     pivot: {x: 0.4827586, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 129
+      x: 127
+      y: 330
       width: 29
       height: 32
-    spriteID: 672e02b4bbae0dc42a55c9fab92acbd2
+    spriteID: ba35071bdfb719e46b9ec5c49b717db5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,19 +138,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 129}
-  - name: ol lady - 3_Frame_1
+    uvTransform: {x: 127, y: 330}
+  - name: Old lady, Yamauba_Frame_1
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 260
+      x: 89
+      y: 443
       width: 30
       height: 32
-    spriteID: bebb302d29e81ea4d800378f2657462d
+    spriteID: 6b24af542f29297498cec8204be1310a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,19 +158,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 260}
-  - name: ol lady - 3_Frame_2
+    uvTransform: {x: 89, y: 443}
+  - name: Old lady, Yamauba_Frame_2
     originalName: 
     pivot: {x: 0.53333336, y: -0.37142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 48
-      y: 403
+      x: 89
+      y: 101
       width: 30
       height: 35
-    spriteID: 74a13f419fd6fe840af04304c66d994c
+    spriteID: 1c8f128b10cda494680c6112d6170adc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,19 +178,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 403}
-  - name: ol lady - 3_Frame_3
+    uvTransform: {x: 89, y: 101}
+  - name: Old lady, Yamauba_Frame_3
     originalName: 
     pivot: {x: 0.4666667, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 300
+      x: 127
+      y: 4
       width: 30
       height: 32
-    spriteID: 884ff035ce92cae49a7cf756118132b5
+    spriteID: 0d7e721ae92118e498d2defd47a7ed94
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,19 +198,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 300}
-  - name: ol lady - 3_Frame_4
+    uvTransform: {x: 127, y: 4}
+  - name: Old lady, Yamauba_Frame_4
     originalName: 
     pivot: {x: 0.4827586, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 169
+      x: 127
+      y: 370
       width: 29
       height: 32
-    spriteID: b83d442c0aa877b499ba3c42c29653e2
+    spriteID: 6e2ced8f5df3d6545b8790ffd54a06fb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,19 +218,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 169}
-  - name: ol lady - 3_Frame_5
+    uvTransform: {x: 127, y: 370}
+  - name: Old lady, Yamauba_Frame_5
     originalName: 
     pivot: {x: 0.4827586, y: -0.42424244}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 460
+      x: 127
+      y: 164
       width: 29
       height: 33
-    spriteID: 4516128fccdb4a0409c9ab645aaf5b7f
+    spriteID: e2e72d66304b17d4f91fe1e033f4a0b6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -238,19 +238,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 460}
-  - name: ol lady - 3_Frame_6
+    uvTransform: {x: 127, y: 164}
+  - name: Old lady, Yamauba_Frame_6
     originalName: 
     pivot: {x: 0.4827586, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 209
+      x: 127
+      y: 410
       width: 29
       height: 32
-    spriteID: 0f4f9537ce487c044ba5ca42d845c05d
+    spriteID: 4945775ea3909a1489a17eeb85a0e811
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -258,19 +258,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 209}
-  - name: ol lady - 3_Frame_7
+    uvTransform: {x: 127, y: 410}
+  - name: Old lady, Yamauba_Frame_7
     originalName: 
     pivot: {x: 0.4827586, y: -0.42424244}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 4
+      x: 127
+      y: 205
       width: 29
       height: 33
-    spriteID: 730741b3178ff1f40a4d156d989614c7
+    spriteID: 390911e0411d94341804a4472e24dd95
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -278,19 +278,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 4}
-  - name: ol lady - 3_Frame_8
+    uvTransform: {x: 127, y: 205}
+  - name: Old lady, Yamauba_Frame_8
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 340
+      x: 127
+      y: 44
       width: 30
       height: 32
-    spriteID: 00bf987d5089d114d8eae87a3ba41586
+    spriteID: d5c8fbf9abe91ca4ab59f37261990f25
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -298,19 +298,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 340}
-  - name: ol lady - 3_Frame_9
+    uvTransform: {x: 127, y: 44}
+  - name: Old lady, Yamauba_Frame_9
     originalName: 
     pivot: {x: 0.55172414, y: -0.516129}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 331
+      x: 201
+      y: 4
       width: 29
       height: 31
-    spriteID: 533248e6e66348f468c4fd5c7f29eb40
+    spriteID: 5308216ec3536804a899343bbc01736d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -318,19 +318,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 331}
-  - name: ol lady - 3_Frame_10
+    uvTransform: {x: 201, y: 4}
+  - name: Old lady, Yamauba_Frame_10
     originalName: 
     pivot: {x: 0.53333336, y: -0.37142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 48
-      y: 446
+      x: 89
+      y: 144
       width: 30
       height: 35
-    spriteID: 8a1bd6a2080f37845bbe21d694a6a2c6
+    spriteID: 22730d565728fe146873f71abdd0d8a3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -338,19 +338,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 446}
-  - name: ol lady - 3_Frame_11
+    uvTransform: {x: 89, y: 144}
+  - name: Old lady, Yamauba_Frame_11
     originalName: 
     pivot: {x: 0.53333336, y: -0.38235295}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 47
+      x: 89
+      y: 230
       width: 30
       height: 34
-    spriteID: f33d5c101c6a0a74e9062682171c855f
+    spriteID: e47a5ec5269d1064b93a6d5c3e8ebc3b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -358,19 +358,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 47}
-  - name: ol lady - 3_Frame_12
+    uvTransform: {x: 89, y: 230}
+  - name: Old lady, Yamauba_Frame_12
     originalName: 
     pivot: {x: 0.53333336, y: -0.37142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 4
+      x: 89
+      y: 187
       width: 30
       height: 35
-    spriteID: 93ef1bc9fb0858a4fa9d1abb74c89272
+    spriteID: e43516ea5291b774a92acb6852530766
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -378,19 +378,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 4}
-  - name: ol lady - 3_Frame_13
+    uvTransform: {x: 89, y: 187}
+  - name: Old lady, Yamauba_Frame_13
     originalName: 
     pivot: {x: 0.53333336, y: -0.38235295}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 89
+      x: 89
+      y: 272
       width: 30
       height: 34
-    spriteID: 4b1fe6091d2885246b57ba7ce5bdd473
+    spriteID: d7f4732e04cfe4142bb0cdb63be4d6bd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -398,19 +398,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 89}
-  - name: ol lady - 3_Frame_14
+    uvTransform: {x: 89, y: 272}
+  - name: Old lady, Yamauba_Frame_14
     originalName: 
     pivot: {x: 0.4666667, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 380
+      x: 127
+      y: 84
       width: 30
       height: 32
-    spriteID: 0a8e71792deb09c41b56da3593463d23
+    spriteID: 68bffbd4684b9324b98acf66107f5e83
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -418,19 +418,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 380}
-  - name: ol lady - 3_Frame_15
+    uvTransform: {x: 127, y: 84}
+  - name: Old lady, Yamauba_Frame_15
     originalName: 
     pivot: {x: 0.44827586, y: -0.516129}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 370
+      x: 201
+      y: 43
       width: 29
       height: 31
-    spriteID: 9ab54196871d3434faf4b92e66354687
+    spriteID: 6236d3b6214c7fc488bbcb952ed8fa12
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -438,19 +438,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 370}
-  - name: ol lady - 3_Frame_16
+    uvTransform: {x: 201, y: 43}
+  - name: Old lady, Yamauba_Frame_16
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 409
+      x: 201
+      y: 82
       width: 28
       height: 32
-    spriteID: 394489e4e4d0dd14ea8857652e703c66
+    spriteID: d0f5575903b9a2c43a154da05442996a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -458,19 +458,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 409}
-  - name: ol lady - 3_Frame_17
+    uvTransform: {x: 201, y: 82}
+  - name: Old lady, Yamauba_Frame_17
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 449
+      x: 201
+      y: 122
       width: 28
       height: 32
-    spriteID: 406a9b80aed3c474b9cd4731d91ee195
+    spriteID: eefafdac5736cbb479b7aa34966406da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -478,19 +478,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 449}
-  - name: ol lady - 3_Frame_18
+    uvTransform: {x: 201, y: 122}
+  - name: Old lady, Yamauba_Frame_18
     originalName: 
     pivot: {x: 0.5, y: -0.37142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 131
+      x: 89
+      y: 314
       width: 28
       height: 35
-    spriteID: b9c953b3e16a8bd45b0b29861dff9e64
+    spriteID: 01b8138e587327c4c97a18c22ed2b90d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -498,59 +498,99 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 131}
-  - name: ol lady - 3_Frame_19
+    uvTransform: {x: 89, y: 314}
+  - name: Old lady, Yamauba_Frame_19
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
+      x: 201
+      y: 162
+      width: 28
+      height: 32
+    spriteID: aef368ed2eb16b44b92104c719dc176f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 162}
+  - name: Old lady, Yamauba_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 202
+      width: 28
+      height: 32
+    spriteID: 2da7a2c9e7c10f24fac4c437438e8a1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 202}
+  - name: Old lady, Yamauba_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.42424244}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 450
+      width: 28
+      height: 33
+    spriteID: 5d8b690f26af25a40b4ed2475341e25b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 450}
+  - name: Old lady, Yamauba_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 242
+      width: 28
+      height: 32
+    spriteID: 20a34ea50ac48d442972d5e07d3d02e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 242}
+  - name: Old lady, Yamauba_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.42424244}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
       y: 4
       width: 28
-      height: 32
-    spriteID: a5b2f223280a89d4b8c93525f3b3f2f5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 4}
-  - name: ol lady - 3_Frame_20
-    originalName: 
-    pivot: {x: 0.5, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 161
-      y: 44
-      width: 28
-      height: 32
-    spriteID: 99ea86ba4098dfa4399f50cf780f8025
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 44}
-  - name: ol lady - 3_Frame_21
-    originalName: 
-    pivot: {x: 0.5, y: -0.42424244}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 124
-      y: 249
-      width: 28
       height: 33
-    spriteID: dc9388d166eeb7b4fab87d1356f54d7b
+    spriteID: 46f5a017e22885341ab9ee4d198288c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -558,19 +598,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 249}
-  - name: ol lady - 3_Frame_22
+    uvTransform: {x: 165, y: 4}
+  - name: Old lady, Yamauba_Frame_24
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 84
+      x: 201
+      y: 282
       width: 28
       height: 32
-    spriteID: bd73a6dea456949478e013c0f276f39b
+    spriteID: 2a91d2f06ed1c2843a61f5ee90d2b5c0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -578,59 +618,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 84}
-  - name: ol lady - 3_Frame_23
-    originalName: 
-    pivot: {x: 0.5, y: -0.42424244}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 124
-      y: 290
-      width: 28
-      height: 33
-    spriteID: 1a1fe825b2ff7814db381b4273edc0e0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 124, y: 290}
-  - name: ol lady - 3_Frame_24
-    originalName: 
-    pivot: {x: 0.5, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 161
-      y: 124
-      width: 28
-      height: 32
-    spriteID: 2b8b7d68fc28d8143801dde127ddea48
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 124}
-  - name: ol lady - 3_Frame_25
+    uvTransform: {x: 201, y: 282}
+  - name: Old lady, Yamauba_Frame_25
     originalName: 
     pivot: {x: 0.5185185, y: -0.516129}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 324
+      x: 165
+      y: 45
       width: 27
       height: 31
-    spriteID: e817b91a701e5624cb09dd97d49ab2b3
+    spriteID: e33145ca7c3bbb94191e1f75ac1dc1af
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -638,19 +638,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 324}
-  - name: ol lady - 3_Frame_26
+    uvTransform: {x: 165, y: 45}
+  - name: Old lady, Yamauba_Frame_26
     originalName: 
     pivot: {x: 0.5, y: -0.37142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 174
+      x: 89
+      y: 357
       width: 28
       height: 35
-    spriteID: 7f54bc225a1844240b224eeae5c03de1
+    spriteID: 19ca9f26dc720374b8c96f694c21542b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -658,19 +658,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 174}
-  - name: ol lady - 3_Frame_27
+    uvTransform: {x: 89, y: 357}
+  - name: Old lady, Yamauba_Frame_27
     originalName: 
     pivot: {x: 0.5, y: -0.38235295}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 45
+      x: 127
+      y: 246
       width: 28
       height: 34
-    spriteID: 9201405a663f64c46a819a284fb166ec
+    spriteID: c6a339904348b984eaa51c49f340e284
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -678,19 +678,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 45}
-  - name: ol lady - 3_Frame_28
+    uvTransform: {x: 127, y: 246}
+  - name: Old lady, Yamauba_Frame_28
     originalName: 
     pivot: {x: 0.5, y: -0.37142858}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 217
+      x: 89
+      y: 400
       width: 28
       height: 35
-    spriteID: 4f0472baf5d74124b86281a012dcb777
+    spriteID: 27afd0a9c7be67041b86d2ec2ae34a93
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -698,19 +698,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 217}
-  - name: ol lady - 3_Frame_29
+    uvTransform: {x: 89, y: 400}
+  - name: Old lady, Yamauba_Frame_29
     originalName: 
     pivot: {x: 0.5, y: -0.38235295}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 87
+      x: 127
+      y: 288
       width: 28
       height: 34
-    spriteID: f7f0b979c3aa83847b4f5a53340fb019
+    spriteID: a15366655a3b09c4d953ec3d2185b8be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -718,19 +718,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 87}
-  - name: ol lady - 3_Frame_30
+    uvTransform: {x: 127, y: 288}
+  - name: Old lady, Yamauba_Frame_30
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 164
+      x: 201
+      y: 322
       width: 28
       height: 32
-    spriteID: 5616f6d6d15cd494c96f1790b9956d97
+    spriteID: b77e07da071a6334c816863f6757abdc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -738,19 +738,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 164}
-  - name: ol lady - 3_Frame_31
+    uvTransform: {x: 201, y: 322}
+  - name: Old lady, Yamauba_Frame_31
     originalName: 
     pivot: {x: 0.4814815, y: -0.516129}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 363
+      x: 165
+      y: 84
       width: 27
       height: 31
-    spriteID: 840fbbf43b8c15447a62a04a5ee7ac24
+    spriteID: e809ae0fadb82374aab33607c6995a98
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -758,19 +758,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 363}
-  - name: ol lady - 3_Frame_32
+    uvTransform: {x: 165, y: 84}
+  - name: Old lady, Yamauba_Frame_32
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 204
+      x: 201
+      y: 362
       width: 28
       height: 32
-    spriteID: 714fd46e03fd41840a18a7d98f230dee
+    spriteID: c6c68cc2c6ee5ac4cb315888154ac636
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -778,59 +778,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 204}
-  - name: ol lady - 3_Frame_33
+    uvTransform: {x: 201, y: 362}
+  - name: Old lady, Yamauba_Frame_33
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 161
-      y: 244
-      width: 28
-      height: 32
-    spriteID: 78f1f4c5c16fd214a9a6f695472fa89a
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 244}
-  - name: ol lady - 3_Frame_34
-    originalName: 
-    pivot: {x: 0.5, y: -0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 161
-      y: 284
-      width: 28
-      height: 32
-    spriteID: 17abd1942f344a24ba772ae285b99970
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 284}
-  - name: ol lady - 3_Frame_35
-    originalName: 
-    pivot: {x: 0.4814815, y: -0.5714286}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 161
+      x: 201
       y: 402
-      width: 27
-      height: 28
-    spriteID: ab207f86babbb4842ac3d2af83d145ec
+      width: 28
+      height: 32
+    spriteID: b7e5279ff9275154a88efd85842d3976
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -838,39 +798,79 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 161, y: 402}
-  - name: ol lady - 3_Frame_36
-    originalName: 
-    pivot: {x: 0.4814815, y: -0.5714286}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 161
-      y: 438
-      width: 27
-      height: 28
-    spriteID: d87ac2d74003f3746806ce06ddb7e2a1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 438}
-  - name: ol lady - 3_Frame_37
+    uvTransform: {x: 201, y: 402}
+  - name: Old lady, Yamauba_Frame_34
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 86
-      y: 420
+      x: 201
+      y: 442
+      width: 28
+      height: 32
+    spriteID: 097c08a46624ed54dabf9ecbbab878c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 442}
+  - name: Old lady, Yamauba_Frame_35
+    originalName: 
+    pivot: {x: 0.4814815, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 123
+      width: 27
+      height: 28
+    spriteID: db9d466d74c4dad44a8b7a3efdce0ff3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 123}
+  - name: Old lady, Yamauba_Frame_36
+    originalName: 
+    pivot: {x: 0.4814815, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 159
+      width: 27
+      height: 28
+    spriteID: 4105b244b4bca254dad3efee51db7550
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 159}
+  - name: Old lady, Yamauba_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 124
       width: 30
       height: 32
-    spriteID: 565fbae9e529a864881496441c6aef13
+    spriteID: e658ce653bcd82948aa7c2a8db4b2248
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -878,19 +878,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 86, y: 420}
-  - name: ol lady - 3_Frame_38
+    uvTransform: {x: 127, y: 124}
+  - name: Old lady, Yamauba_Frame_38
     originalName: 
     pivot: {x: 0.5, y: -0.41025642}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 48
-      y: 356
+      x: 89
+      y: 54
       width: 30
       height: 39
-    spriteID: bc01293249766724db88076bf810be6b
+    spriteID: 33f4b2ebeb7f1c547a01718a97ac0b69
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -898,8 +898,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 356}
-  - name: ol lady - 3_Frame_39
+    uvTransform: {x: 89, y: 54}
+  - name: Old lady, Yamauba_Frame_39
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -910,7 +910,7 @@ ScriptedImporter:
       y: 4
       width: 36
       height: 43
-    spriteID: 505a349eedbbfbb438a0b3b3fd1b9eab
+    spriteID: 2acce5f5ee97df24789bbde94bf7a379
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -919,7 +919,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: ol lady - 3_Frame_40
+  - name: Old lady, Yamauba_Frame_40
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -930,7 +930,7 @@ ScriptedImporter:
       y: 55
       width: 36
       height: 43
-    spriteID: 4e83fbe29271e2b4d89501c569008a04
+    spriteID: b8c6215299a2bd148a592843f0556141
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -939,7 +939,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 55}
-  - name: ol lady - 3_Frame_41
+  - name: Old lady, Yamauba_Frame_41
     originalName: 
     pivot: {x: 0.5, y: -0.4047619}
     alignment: 9
@@ -947,10 +947,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 56
+      y: 158
       width: 30
       height: 42
-    spriteID: 705539ef1ce6fbf43bf73bc70b4ecb34
+    spriteID: 8d8b2fb2cd444af4cac4b2d0a14b554c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -958,8 +958,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 56}
-  - name: ol lady - 3_Frame_42
+    uvTransform: {x: 48, y: 158}
+  - name: Old lady, Yamauba_Frame_42
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -970,7 +970,7 @@ ScriptedImporter:
       y: 106
       width: 36
       height: 43
-    spriteID: 09f2635f398968e4d872c3ccf7370cc2
+    spriteID: 7931aa1e5e200684abe52a3bf0e90c90
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -979,7 +979,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 106}
-  - name: ol lady - 3_Frame_43
+  - name: Old lady, Yamauba_Frame_43
     originalName: 
     pivot: {x: 0.5, y: -0.4047619}
     alignment: 9
@@ -987,10 +987,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 106
+      y: 208
       width: 30
       height: 42
-    spriteID: 1850f2bb7b6bb2e43916af325483f2d5
+    spriteID: 913e5318dc49d5241913bc952bde59bd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -998,8 +998,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 106}
-  - name: ol lady - 3_Frame_44
+    uvTransform: {x: 48, y: 208}
+  - name: Old lady, Yamauba_Frame_44
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -1010,7 +1010,7 @@ ScriptedImporter:
       y: 157
       width: 36
       height: 43
-    spriteID: 480aa5a836048ad42bedd5c96110d3d4
+    spriteID: 0a1a72da7fa0fd34097289e5a7deb5de
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1019,18 +1019,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 157}
-  - name: ol lady - 3_Frame_45
+  - name: Old lady, Yamauba_Frame_45
     originalName: 
     pivot: {x: 0.4666667, y: -0.3181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 461
+      x: 48
+      y: 54
       width: 30
       height: 44
-    spriteID: 89edac4f8106baf4e94385459d12a6da
+    spriteID: 9e7368f6b6558c64a8710d5fcbd7ffb6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1038,8 +1038,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 461}
-  - name: ol lady - 3_Frame_46
+    uvTransform: {x: 48, y: 54}
+  - name: Old lady, Yamauba_Frame_46
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -1050,7 +1050,7 @@ ScriptedImporter:
       y: 208
       width: 36
       height: 43
-    spriteID: 7d6e22cc1f77a2f41ba1cdb8fa63ad47
+    spriteID: 4a4a434ee78b3e341afb46b13ae865bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1059,7 +1059,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 208}
-  - name: ol lady - 3_Frame_47
+  - name: Old lady, Yamauba_Frame_47
     originalName: 
     pivot: {x: 0.53333336, y: -0.3181818}
     alignment: 9
@@ -1067,10 +1067,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 4
+      y: 106
       width: 30
       height: 44
-    spriteID: 8ec80599245e5c8428b9d8f97cbb065a
+    spriteID: 97778fec878f266499bc6f69a8f0b70a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1078,8 +1078,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 4}
-  - name: ol lady - 3_Frame_48
+    uvTransform: {x: 48, y: 106}
+  - name: Old lady, Yamauba_Frame_48
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -1090,7 +1090,7 @@ ScriptedImporter:
       y: 259
       width: 36
       height: 43
-    spriteID: 0d55bfd422713d441a370a6b75d8a08d
+    spriteID: 3f179784bae11154aac084e4ea94284b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1099,7 +1099,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 259}
-  - name: ol lady - 3_Frame_49
+  - name: Old lady, Yamauba_Frame_49
     originalName: 
     pivot: {x: 0.4666667, y: -0.3809524}
     alignment: 9
@@ -1107,10 +1107,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 156
+      y: 258
       width: 30
       height: 42
-    spriteID: 1d1dd9aa5e3747e40adeaa5bf2ad4900
+    spriteID: a7106bb2cbaaec8479feae47b03963eb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1118,8 +1118,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 156}
-  - name: ol lady - 3_Frame_50
+    uvTransform: {x: 48, y: 258}
+  - name: Old lady, Yamauba_Frame_50
     originalName: 
     pivot: {x: 0.5, y: -0.37209302}
     alignment: 9
@@ -1130,7 +1130,7 @@ ScriptedImporter:
       y: 310
       width: 36
       height: 43
-    spriteID: 1daee5ce3b7a81946b95ee979c0f1272
+    spriteID: 6612914114bcf55469f151d9e1282fec
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1139,7 +1139,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 310}
-  - name: ol lady - 3_Frame_51
+  - name: Old lady, Yamauba_Frame_51
     originalName: 
     pivot: {x: 0.53333336, y: -0.3809524}
     alignment: 9
@@ -1147,10 +1147,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 206
+      y: 308
       width: 30
       height: 42
-    spriteID: 6d569b36abd39324dadc10cda7e7ff9f
+    spriteID: 80b33f8037a818246853e8d462ebf492
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1158,8 +1158,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 206}
-  - name: ol lady - 3_Frame_52
+    uvTransform: {x: 48, y: 308}
+  - name: Old lady, Yamauba_Frame_52
     originalName: 
     pivot: {x: 0.5, y: -0.4047619}
     alignment: 9
@@ -1167,10 +1167,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 256
+      y: 358
       width: 30
       height: 42
-    spriteID: 2805bffddb85ada4fab82397325edea8
+    spriteID: 6cb9a587e2a801b48a31d77cb37ccce3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1178,19 +1178,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 256}
-  - name: ol lady - 3_Frame_53
+    uvTransform: {x: 48, y: 358}
+  - name: Old lady, Yamauba_Frame_53
     originalName: 
-    pivot: {x: 0.54545456, y: -0.3809524}
+    pivot: {x: 0.45454547, y: -0.3809524}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 411
+      y: 461
       width: 33
       height: 42
-    spriteID: 0cc40136e7bd93e4696a46aa8f1f735b
+    spriteID: 2b45326ecd7962347b5230428c2c8d19
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1198,8 +1198,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 411}
-  - name: ol lady - 3_Frame_54
+    uvTransform: {x: 4, y: 461}
+  - name: Old lady, Yamauba_Frame_54
     originalName: 
     pivot: {x: 0.5, y: -0.4047619}
     alignment: 9
@@ -1207,10 +1207,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 48
-      y: 306
+      y: 408
       width: 30
       height: 42
-    spriteID: daa565190164b03498fc545a9060e72f
+    spriteID: 49005db55461a874db99e0080e1dec5e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1218,10 +1218,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 48, y: 306}
-  - name: ol lady - 3_Frame_55
+    uvTransform: {x: 48, y: 408}
+  - name: Old lady, Yamauba_Frame_55
     originalName: 
-    pivot: {x: 0.5294118, y: -0.3809524}
+    pivot: {x: 0.47058824, y: -0.3809524}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1230,7 +1230,7 @@ ScriptedImporter:
       y: 361
       width: 34
       height: 42
-    spriteID: 2c233bfdc4efbe54499e55316a3097fd
+    spriteID: 31a518987f92e92439addc37ce58cadd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1239,463 +1239,575 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 361}
+  - name: Old lady, Yamauba_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: -0.4047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 458
+      width: 30
+      height: 42
+    spriteID: 1d5b669616f8fb34aa237bd543121dcf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 458}
+  - name: Old lady, Yamauba_Frame_57
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.3809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 4
+      width: 33
+      height: 42
+    spriteID: 504ed79ff8e551f4ba01a37db53cef50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 4}
+  - name: Old lady, Yamauba_Frame_58
+    originalName: 
+    pivot: {x: 0.5, y: -0.4047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 89
+      y: 4
+      width: 30
+      height: 42
+    spriteID: 793a8b5a133d96947855291052c909c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 89, y: 4}
+  - name: Old lady, Yamauba_Frame_59
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.3809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 411
+      width: 34
+      height: 42
+    spriteID: 8ea7c966d18750c418473d4cebd412c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 411}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -539171491
-    name: ol lady - 3
+    guid: 1959124533
+    name: Old lady, Yamauba
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ol lady - 3_Frame_0
+    - name: Old lady, Yamauba_Frame_0
       frameIndex: 0
       cellRect:
         x: 18
         y: 16
         width: 29
         height: 32
-      spriteId: 672e02b4bbae0dc42a55c9fab92acbd2
-    - name: ol lady - 3_Frame_1
+      spriteId: ba35071bdfb719e46b9ec5c49b717db5
+    - name: Old lady, Yamauba_Frame_1
       frameIndex: 1
       cellRect:
         x: 16
         y: 16
         width: 30
         height: 32
-      spriteId: bebb302d29e81ea4d800378f2657462d
-    - name: ol lady - 3_Frame_2
+      spriteId: 6b24af542f29297498cec8204be1310a
+    - name: Old lady, Yamauba_Frame_2
       frameIndex: 2
       cellRect:
         x: 16
         y: 13
         width: 30
         height: 35
-      spriteId: 74a13f419fd6fe840af04304c66d994c
-    - name: ol lady - 3_Frame_3
+      spriteId: 1c8f128b10cda494680c6112d6170adc
+    - name: Old lady, Yamauba_Frame_3
       frameIndex: 3
       cellRect:
         x: 18
         y: 16
         width: 30
         height: 32
-      spriteId: 884ff035ce92cae49a7cf756118132b5
-    - name: ol lady - 3_Frame_4
+      spriteId: 0d7e721ae92118e498d2defd47a7ed94
+    - name: Old lady, Yamauba_Frame_4
       frameIndex: 4
       cellRect:
         x: 18
         y: 16
         width: 29
         height: 32
-      spriteId: b83d442c0aa877b499ba3c42c29653e2
-    - name: ol lady - 3_Frame_5
+      spriteId: 6e2ced8f5df3d6545b8790ffd54a06fb
+    - name: Old lady, Yamauba_Frame_5
       frameIndex: 5
       cellRect:
         x: 18
         y: 14
         width: 29
         height: 33
-      spriteId: 4516128fccdb4a0409c9ab645aaf5b7f
-    - name: ol lady - 3_Frame_6
+      spriteId: e2e72d66304b17d4f91fe1e033f4a0b6
+    - name: Old lady, Yamauba_Frame_6
       frameIndex: 6
       cellRect:
         x: 18
         y: 16
         width: 29
         height: 32
-      spriteId: 0f4f9537ce487c044ba5ca42d845c05d
-    - name: ol lady - 3_Frame_7
+      spriteId: 4945775ea3909a1489a17eeb85a0e811
+    - name: Old lady, Yamauba_Frame_7
       frameIndex: 7
       cellRect:
         x: 18
         y: 14
         width: 29
         height: 33
-      spriteId: 730741b3178ff1f40a4d156d989614c7
-    - name: ol lady - 3_Frame_8
+      spriteId: 390911e0411d94341804a4472e24dd95
+    - name: Old lady, Yamauba_Frame_8
       frameIndex: 8
       cellRect:
         x: 16
         y: 16
         width: 30
         height: 32
-      spriteId: 00bf987d5089d114d8eae87a3ba41586
-    - name: ol lady - 3_Frame_9
+      spriteId: d5c8fbf9abe91ca4ab59f37261990f25
+    - name: Old lady, Yamauba_Frame_9
       frameIndex: 9
       cellRect:
         x: 16
         y: 16
         width: 29
         height: 31
-      spriteId: 533248e6e66348f468c4fd5c7f29eb40
-    - name: ol lady - 3_Frame_10
+      spriteId: 5308216ec3536804a899343bbc01736d
+    - name: Old lady, Yamauba_Frame_10
       frameIndex: 10
       cellRect:
         x: 16
         y: 13
         width: 30
         height: 35
-      spriteId: 8a1bd6a2080f37845bbe21d694a6a2c6
-    - name: ol lady - 3_Frame_11
+      spriteId: 22730d565728fe146873f71abdd0d8a3
+    - name: Old lady, Yamauba_Frame_11
       frameIndex: 11
       cellRect:
         x: 16
         y: 13
         width: 30
         height: 34
-      spriteId: f33d5c101c6a0a74e9062682171c855f
-    - name: ol lady - 3_Frame_12
+      spriteId: e47a5ec5269d1064b93a6d5c3e8ebc3b
+    - name: Old lady, Yamauba_Frame_12
       frameIndex: 12
       cellRect:
         x: 16
         y: 13
         width: 30
         height: 35
-      spriteId: 93ef1bc9fb0858a4fa9d1abb74c89272
-    - name: ol lady - 3_Frame_13
+      spriteId: e43516ea5291b774a92acb6852530766
+    - name: Old lady, Yamauba_Frame_13
       frameIndex: 13
       cellRect:
         x: 16
         y: 13
         width: 30
         height: 34
-      spriteId: 4b1fe6091d2885246b57ba7ce5bdd473
-    - name: ol lady - 3_Frame_14
+      spriteId: d7f4732e04cfe4142bb0cdb63be4d6bd
+    - name: Old lady, Yamauba_Frame_14
       frameIndex: 14
       cellRect:
         x: 18
         y: 16
         width: 30
         height: 32
-      spriteId: 0a8e71792deb09c41b56da3593463d23
-    - name: ol lady - 3_Frame_15
+      spriteId: 68bffbd4684b9324b98acf66107f5e83
+    - name: Old lady, Yamauba_Frame_15
       frameIndex: 15
       cellRect:
         x: 19
         y: 16
         width: 29
         height: 31
-      spriteId: 9ab54196871d3434faf4b92e66354687
-    - name: ol lady - 3_Frame_16
+      spriteId: 6236d3b6214c7fc488bbcb952ed8fa12
+    - name: Old lady, Yamauba_Frame_16
       frameIndex: 16
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 394489e4e4d0dd14ea8857652e703c66
-    - name: ol lady - 3_Frame_17
+      spriteId: d0f5575903b9a2c43a154da05442996a
+    - name: Old lady, Yamauba_Frame_17
       frameIndex: 17
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 406a9b80aed3c474b9cd4731d91ee195
-    - name: ol lady - 3_Frame_18
+      spriteId: eefafdac5736cbb479b7aa34966406da
+    - name: Old lady, Yamauba_Frame_18
       frameIndex: 18
       cellRect:
         x: 18
         y: 13
         width: 28
         height: 35
-      spriteId: b9c953b3e16a8bd45b0b29861dff9e64
-    - name: ol lady - 3_Frame_19
+      spriteId: 01b8138e587327c4c97a18c22ed2b90d
+    - name: Old lady, Yamauba_Frame_19
       frameIndex: 19
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: a5b2f223280a89d4b8c93525f3b3f2f5
-    - name: ol lady - 3_Frame_20
+      spriteId: aef368ed2eb16b44b92104c719dc176f
+    - name: Old lady, Yamauba_Frame_20
       frameIndex: 20
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 99ea86ba4098dfa4399f50cf780f8025
-    - name: ol lady - 3_Frame_21
+      spriteId: 2da7a2c9e7c10f24fac4c437438e8a1f
+    - name: Old lady, Yamauba_Frame_21
       frameIndex: 21
       cellRect:
         x: 18
         y: 14
         width: 28
         height: 33
-      spriteId: dc9388d166eeb7b4fab87d1356f54d7b
-    - name: ol lady - 3_Frame_22
+      spriteId: 5d8b690f26af25a40b4ed2475341e25b
+    - name: Old lady, Yamauba_Frame_22
       frameIndex: 22
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: bd73a6dea456949478e013c0f276f39b
-    - name: ol lady - 3_Frame_23
+      spriteId: 20a34ea50ac48d442972d5e07d3d02e8
+    - name: Old lady, Yamauba_Frame_23
       frameIndex: 23
       cellRect:
         x: 18
         y: 14
         width: 28
         height: 33
-      spriteId: 1a1fe825b2ff7814db381b4273edc0e0
-    - name: ol lady - 3_Frame_24
+      spriteId: 46f5a017e22885341ab9ee4d198288c6
+    - name: Old lady, Yamauba_Frame_24
       frameIndex: 24
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 2b8b7d68fc28d8143801dde127ddea48
-    - name: ol lady - 3_Frame_25
+      spriteId: 2a91d2f06ed1c2843a61f5ee90d2b5c0
+    - name: Old lady, Yamauba_Frame_25
       frameIndex: 25
       cellRect:
         x: 18
         y: 16
         width: 27
         height: 31
-      spriteId: e817b91a701e5624cb09dd97d49ab2b3
-    - name: ol lady - 3_Frame_26
+      spriteId: e33145ca7c3bbb94191e1f75ac1dc1af
+    - name: Old lady, Yamauba_Frame_26
       frameIndex: 26
       cellRect:
         x: 18
         y: 13
         width: 28
         height: 35
-      spriteId: 7f54bc225a1844240b224eeae5c03de1
-    - name: ol lady - 3_Frame_27
+      spriteId: 19ca9f26dc720374b8c96f694c21542b
+    - name: Old lady, Yamauba_Frame_27
       frameIndex: 27
       cellRect:
         x: 18
         y: 13
         width: 28
         height: 34
-      spriteId: 9201405a663f64c46a819a284fb166ec
-    - name: ol lady - 3_Frame_28
+      spriteId: c6a339904348b984eaa51c49f340e284
+    - name: Old lady, Yamauba_Frame_28
       frameIndex: 28
       cellRect:
         x: 18
         y: 13
         width: 28
         height: 35
-      spriteId: 4f0472baf5d74124b86281a012dcb777
-    - name: ol lady - 3_Frame_29
+      spriteId: 27afd0a9c7be67041b86d2ec2ae34a93
+    - name: Old lady, Yamauba_Frame_29
       frameIndex: 29
       cellRect:
         x: 18
         y: 13
         width: 28
         height: 34
-      spriteId: f7f0b979c3aa83847b4f5a53340fb019
-    - name: ol lady - 3_Frame_30
+      spriteId: a15366655a3b09c4d953ec3d2185b8be
+    - name: Old lady, Yamauba_Frame_30
       frameIndex: 30
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 5616f6d6d15cd494c96f1790b9956d97
-    - name: ol lady - 3_Frame_31
+      spriteId: b77e07da071a6334c816863f6757abdc
+    - name: Old lady, Yamauba_Frame_31
       frameIndex: 31
       cellRect:
         x: 19
         y: 16
         width: 27
         height: 31
-      spriteId: 840fbbf43b8c15447a62a04a5ee7ac24
-    - name: ol lady - 3_Frame_32
+      spriteId: e809ae0fadb82374aab33607c6995a98
+    - name: Old lady, Yamauba_Frame_32
       frameIndex: 32
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 714fd46e03fd41840a18a7d98f230dee
-    - name: ol lady - 3_Frame_33
+      spriteId: c6c68cc2c6ee5ac4cb315888154ac636
+    - name: Old lady, Yamauba_Frame_33
       frameIndex: 33
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 78f1f4c5c16fd214a9a6f695472fa89a
-    - name: ol lady - 3_Frame_34
+      spriteId: b7e5279ff9275154a88efd85842d3976
+    - name: Old lady, Yamauba_Frame_34
       frameIndex: 34
       cellRect:
         x: 18
         y: 16
         width: 28
         height: 32
-      spriteId: 17abd1942f344a24ba772ae285b99970
-    - name: ol lady - 3_Frame_35
+      spriteId: 097c08a46624ed54dabf9ecbbab878c9
+    - name: Old lady, Yamauba_Frame_35
       frameIndex: 35
       cellRect:
         x: 19
         y: 16
         width: 27
         height: 28
-      spriteId: ab207f86babbb4842ac3d2af83d145ec
-    - name: ol lady - 3_Frame_36
+      spriteId: db9d466d74c4dad44a8b7a3efdce0ff3
+    - name: Old lady, Yamauba_Frame_36
       frameIndex: 36
       cellRect:
         x: 19
         y: 16
         width: 27
         height: 28
-      spriteId: d87ac2d74003f3746806ce06ddb7e2a1
-    - name: ol lady - 3_Frame_37
+      spriteId: 4105b244b4bca254dad3efee51db7550
+    - name: Old lady, Yamauba_Frame_37
       frameIndex: 37
       cellRect:
         x: 17
         y: 16
         width: 30
         height: 32
-      spriteId: 565fbae9e529a864881496441c6aef13
-    - name: ol lady - 3_Frame_38
+      spriteId: e658ce653bcd82948aa7c2a8db4b2248
+    - name: Old lady, Yamauba_Frame_38
       frameIndex: 38
       cellRect:
         x: 17
         y: 16
         width: 30
         height: 39
-      spriteId: bc01293249766724db88076bf810be6b
-    - name: ol lady - 3_Frame_39
+      spriteId: 33f4b2ebeb7f1c547a01718a97ac0b69
+    - name: Old lady, Yamauba_Frame_39
       frameIndex: 39
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 505a349eedbbfbb438a0b3b3fd1b9eab
-    - name: ol lady - 3_Frame_40
+      spriteId: 2acce5f5ee97df24789bbde94bf7a379
+    - name: Old lady, Yamauba_Frame_40
       frameIndex: 40
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 4e83fbe29271e2b4d89501c569008a04
-    - name: ol lady - 3_Frame_41
+      spriteId: b8c6215299a2bd148a592843f0556141
+    - name: Old lady, Yamauba_Frame_41
       frameIndex: 41
       cellRect:
         x: 17
         y: 17
         width: 30
         height: 42
-      spriteId: 705539ef1ce6fbf43bf73bc70b4ecb34
-    - name: ol lady - 3_Frame_42
+      spriteId: 8d8b2fb2cd444af4cac4b2d0a14b554c
+    - name: Old lady, Yamauba_Frame_42
       frameIndex: 42
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 09f2635f398968e4d872c3ccf7370cc2
-    - name: ol lady - 3_Frame_43
+      spriteId: 7931aa1e5e200684abe52a3bf0e90c90
+    - name: Old lady, Yamauba_Frame_43
       frameIndex: 43
       cellRect:
         x: 17
         y: 17
         width: 30
         height: 42
-      spriteId: 1850f2bb7b6bb2e43916af325483f2d5
-    - name: ol lady - 3_Frame_44
+      spriteId: 913e5318dc49d5241913bc952bde59bd
+    - name: Old lady, Yamauba_Frame_44
       frameIndex: 44
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 480aa5a836048ad42bedd5c96110d3d4
-    - name: ol lady - 3_Frame_45
+      spriteId: 0a1a72da7fa0fd34097289e5a7deb5de
+    - name: Old lady, Yamauba_Frame_45
       frameIndex: 45
       cellRect:
         x: 18
         y: 14
         width: 30
         height: 44
-      spriteId: 89edac4f8106baf4e94385459d12a6da
-    - name: ol lady - 3_Frame_46
+      spriteId: 9e7368f6b6558c64a8710d5fcbd7ffb6
+    - name: Old lady, Yamauba_Frame_46
       frameIndex: 46
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 7d6e22cc1f77a2f41ba1cdb8fa63ad47
-    - name: ol lady - 3_Frame_47
+      spriteId: 4a4a434ee78b3e341afb46b13ae865bc
+    - name: Old lady, Yamauba_Frame_47
       frameIndex: 47
       cellRect:
         x: 16
         y: 14
         width: 30
         height: 44
-      spriteId: 8ec80599245e5c8428b9d8f97cbb065a
-    - name: ol lady - 3_Frame_48
+      spriteId: 97778fec878f266499bc6f69a8f0b70a
+    - name: Old lady, Yamauba_Frame_48
       frameIndex: 48
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 0d55bfd422713d441a370a6b75d8a08d
-    - name: ol lady - 3_Frame_49
+      spriteId: 3f179784bae11154aac084e4ea94284b
+    - name: Old lady, Yamauba_Frame_49
       frameIndex: 49
       cellRect:
         x: 18
         y: 16
         width: 30
         height: 42
-      spriteId: 1d1dd9aa5e3747e40adeaa5bf2ad4900
-    - name: ol lady - 3_Frame_50
+      spriteId: a7106bb2cbaaec8479feae47b03963eb
+    - name: Old lady, Yamauba_Frame_50
       frameIndex: 50
       cellRect:
         x: 14
         y: 16
         width: 36
         height: 43
-      spriteId: 1daee5ce3b7a81946b95ee979c0f1272
-    - name: ol lady - 3_Frame_51
+      spriteId: 6612914114bcf55469f151d9e1282fec
+    - name: Old lady, Yamauba_Frame_51
       frameIndex: 51
       cellRect:
         x: 16
         y: 16
         width: 30
         height: 42
-      spriteId: 6d569b36abd39324dadc10cda7e7ff9f
-    - name: ol lady - 3_Frame_52
+      spriteId: 80b33f8037a818246853e8d462ebf492
+    - name: Old lady, Yamauba_Frame_52
       frameIndex: 52
       cellRect:
         x: 17
         y: 17
         width: 30
         height: 42
-      spriteId: 2805bffddb85ada4fab82397325edea8
-    - name: ol lady - 3_Frame_53
+      spriteId: 6cb9a587e2a801b48a31d77cb37ccce3
+    - name: Old lady, Yamauba_Frame_53
       frameIndex: 53
       cellRect:
-        x: 14
+        x: 17
         y: 16
         width: 33
         height: 42
-      spriteId: 0cc40136e7bd93e4696a46aa8f1f735b
-    - name: ol lady - 3_Frame_54
+      spriteId: 2b45326ecd7962347b5230428c2c8d19
+    - name: Old lady, Yamauba_Frame_54
       frameIndex: 54
       cellRect:
         x: 17
         y: 17
         width: 30
         height: 42
-      spriteId: daa565190164b03498fc545a9060e72f
-    - name: ol lady - 3_Frame_55
+      spriteId: 49005db55461a874db99e0080e1dec5e
+    - name: Old lady, Yamauba_Frame_55
       frameIndex: 55
+      cellRect:
+        x: 16
+        y: 16
+        width: 34
+        height: 42
+      spriteId: 31a518987f92e92439addc37ce58cadd
+    - name: Old lady, Yamauba_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 17
+        y: 17
+        width: 30
+        height: 42
+      spriteId: 1d5b669616f8fb34aa237bd543121dcf
+    - name: Old lady, Yamauba_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 14
+        y: 16
+        width: 33
+        height: 42
+      spriteId: 504ed79ff8e551f4ba01a37db53cef50
+    - name: Old lady, Yamauba_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 17
+        y: 17
+        width: 30
+        height: 42
+      spriteId: 793a8b5a133d96947855291052c909c9
+    - name: Old lady, Yamauba_Frame_59
+      frameIndex: 59
       cellRect:
         x: 14
         y: 16
         width: 34
         height: 42
-      spriteId: 2c233bfdc4efbe54499e55316a3097fd
+      spriteId: 8ea7c966d18750c418473d4cebd412c7
     linkedCells: []
     parentIndex: -1
   platformSettings: []
