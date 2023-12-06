@@ -232,6 +232,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ESprite: {fileID: 0}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -11676,10 +11677,10 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
+    pivot: {x: 0.5, y: 0.8125}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -12126,6 +12127,7 @@ MonoBehaviour:
   Chase: {fileID: 8300000, guid: 98a8e62343ab1bb43a47fa4f8ada13e6, type: 3}
   player: {fileID: 230440567}
   Yamamba: {fileID: 906541211}
+  ActivateMusic: 0
 --- !u!1 &1852646610
 GameObject:
   m_ObjectHideFlags: 0

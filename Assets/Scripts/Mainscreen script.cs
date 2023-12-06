@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Mainscreenscript : MonoBehaviour
+public class SceneSelectButton : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    // Use this for initialization
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void LoadSceneSelect(int Sceneindix)
+    {
+        SceneManager.LoadScene(Sceneindix);
     }
 }
