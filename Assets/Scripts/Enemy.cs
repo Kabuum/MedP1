@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
 
     public DetectionTriangle triScript;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +82,9 @@ public class Enemy : MonoBehaviour
         }
         EnemyAnim(DirectionIndex, Lantern, Monster);
     }
-
+    public void TransformToMonster()
+    { //Her skal player ændre skin til monster. 
+    }
     void NextWaypoint()
     {
         WaypointIndex++;

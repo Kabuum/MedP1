@@ -24,6 +24,7 @@ public class PlayerBehavior : MonoBehaviour
     public UnityEvent openDoor;
     public GameObject ESprite;
     private Collider2D Interactable;
+    public bool canMove;
 
 
     // Start is called before the first frame update

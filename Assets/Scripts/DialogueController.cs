@@ -7,13 +7,13 @@ using System.Threading;
 using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
-
     public Event DialogueEvent;
     public GameObject textBack;
     public GameObject spacebar;
@@ -22,18 +22,17 @@ public class DialogueController : MonoBehaviour
 
     public string text;
     public int maxChar;
+    public bool dialogDone = false;
     public float charDelay;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         dialogField.SetActive(false);
         OpenDialog(text);
-        
     }
     public void OpenDialog(string text)
     {
+        dialogDone = false;
         dialogField.SetActive(true);
         spacebar.SetActive(false);
         StartCoroutine(ShowDialogue(KeyCode.Space, text, maxChar));
@@ -45,7 +44,7 @@ public class DialogueController : MonoBehaviour
         string[] words = text.Split(" ");
         for (i = 0; i < words.Length; i++)
         {
-            Debug.Log(words[i]);
+         //   Debug.Log(words[i]);
             if (textSpeech.text.Length + words[i].Length <= maxChar)
             {
                 char[] chars = words[i].ToCharArray();
@@ -67,10 +66,7 @@ public class DialogueController : MonoBehaviour
         }
         spacebar.SetActive(true);
         yield return new WaitUntil(() => Input.GetKeyDown(key));
+        dialogDone = true;
         dialogField.SetActive(false);
-
     }
 }
-
-
-
