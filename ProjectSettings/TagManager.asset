@@ -14,6 +14,7 @@ TagManager:
   - Key1
   - Key2
   - Crowbar
+  - GameManager
   layers:
   - Default
   - TransparentFX

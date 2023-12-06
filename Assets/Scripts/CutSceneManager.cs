@@ -5,6 +5,7 @@ using NavMeshPlus;
 using Unity.VisualScripting;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEditor.AnimatedValues;
 
 public class CutSceneManager : MonoBehaviour
 {
@@ -14,25 +15,28 @@ public class CutSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        scene.enemy = GameObject.FindWithTag("Yamamba");
+        scene.dialogueController = GameObject.FindWithTag("GameManager").GetComponent<DialogueController>();
+        scene.player = GameObject.FindWithTag("Player");
+        scene.agent = scene.enemy.GetComponent<NavMeshAgent>();
+
         CutSceneEvent evs = new CutSceneEvent();
         evs.targetPosition = player.transform.position;
         evs.isMoveEvent = true;
         evs.isTalkEvent = false;
-        evs.speed = 1;
-        evs.moveInstant = true;
+        evs.speed = 3;
+        evs.moveInstant = false;
         evs.eventDelay = 2;
-        evs.dialogText = "Sut min diller";
-        evs.targetPosition = new CutScene().player.transform.position;
+        evs.dialogText = "";
+        evs.targetPosition = player.transform.position;
+
         cutScenes[0] = scene;
         cutScenes[0].events = new CutSceneEvent[6];
         cutScenes[0].events[0] = evs;
-
-        
     }
-
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             StartCoroutine(cutScenes[0].Cutscene());
         }
@@ -55,22 +59,20 @@ public class CutSceneEvent
 }
 public class CutScene
 {
-
-    public UnityEvent stopPlayerEvent;
-    DialogueController dialogueController = GameObject.FindWithTag("GameManager").GetComponent<DialogueController>();
-    public GameObject enemy = GameObject.FindWithTag("Yamamba");
+    public DialogueController dialogueController;
     //private NavMeshAgent agent = GameObject.FindWithTag("Yamamba").GetComponent<NavMeshAgent>();
 
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     public CutSceneEvent[] events;
-    public GameObject player = GameObject.FindWithTag("Player");
+    public GameObject player;
+    public GameObject enemy;
     private float targetOffset = 0.5f;
-
     public IEnumerator Cutscene()
     {
-        Debug.Log("bruh");
+        enemy.GetComponent<Enemy>().animated = true;
         foreach (CutSceneEvent ev in events)
         {
+            enemy.GetComponent<Enemy>().animated = true;
             if (ev.playerCanMove == false)
             {
                 player.GetComponent<PlayerBehavior>().canMove = false;
@@ -83,13 +85,12 @@ public class CutScene
             {
                 if (ev.dialogText != "")
                 {
+                    // Debug.Log(ev.dialogText);
                     dialogueController.OpenDialog(ev.dialogText);
-
                 }
                 yield return new WaitUntil(() => dialogueController.dialogDone == true);
                 yield return new WaitForSeconds(ev.eventDelay);
                 yield break;
-
             }
             else if (ev.isMoveEvent)
             {
@@ -101,9 +102,11 @@ public class CutScene
                 }
                 else
                 {
+                    enemy.GetComponent<Enemy>().animated = true;
                     agent.SetDestination(ev.targetPosition);
                     agent.speed = ev.speed;
-                    yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, ev.targetPosition) <= targetOffset);
+                   
+                    yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, player.transform.position) <= 0.25f);
                     yield return new WaitForSeconds(ev.eventDelay);
                     yield break;
                 }
@@ -117,6 +120,8 @@ public class CutScene
                 yield break;
             }
         }
+        enemy.GetComponent<Enemy>().animated = false;
+        enemy.GetComponent<Enemy>().DestinationUpdate();
     }
     //Unityevent add listner for CutSceneIEnumartori
 }

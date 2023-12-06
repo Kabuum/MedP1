@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     private Animator EnemyAnimator;
     private bool Monster = false;
     public bool Lantern = false;
+    public bool animated = false;
 
     public UnityEvent openDoor;
 
@@ -40,14 +41,16 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("animated : " + animated);
+        Debug.Log(agent.destination);
         PlayerSpotted = triScript.CheckInSight();
 
-        if (Vector3.Distance(transform.position, target) < 0.5f && !PlayerSpotted)
+        if (Vector3.Distance(transform.position, target) < 0.5f && !PlayerSpotted && animated == false)
         {
             NextWaypoint();
             DestinationUpdate();
         }
-        else if (Vector3.Distance(transform.position, target) < 0.5f && PlayerSpotted)
+        else if (Vector3.Distance(transform.position, target) < 0.5f && PlayerSpotted && animated == false)
         {
             DestinationUpdate();
             //death
@@ -93,15 +96,15 @@ public class Enemy : MonoBehaviour
             WaypointIndex = 0;
         }
     }
-    private void DestinationUpdate()
+    public void DestinationUpdate()
     {
-        if (PlayerSpotted)
+        if (PlayerSpotted && animated == false)
         {
             agent.speed = runspeed;
             target = Player.position;
             agent.SetDestination(target);
         }
-        else
+        else if (PlayerSpotted == false && animated == false)
         {
             agent.speed = walkspeed;
             target = Waypoints[WaypointIndex].position;

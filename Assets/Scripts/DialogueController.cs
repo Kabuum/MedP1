@@ -20,7 +20,7 @@ public class DialogueController : MonoBehaviour
     public GameObject dialogField;
     public TMP_Text textSpeech;
 
-    public string text;
+   // public string text;
     public int maxChar;
     public bool dialogDone = false;
     public float charDelay;
@@ -28,7 +28,7 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         dialogField.SetActive(false);
-        OpenDialog(text);
+       
     }
     public void OpenDialog(string text)
     {
