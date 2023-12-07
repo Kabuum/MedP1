@@ -31,7 +31,7 @@ public class DetectionTriangle : MonoBehaviour
         {
             playerInSight = false;
         }
-        Debug.Log(outOfSightTimer);
+       // Debug.Log(outOfSightTimer);
     }
 
     public bool CheckInSight()

@@ -14,4 +14,8 @@ public static class SceneMangment
     {
         LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
+    public static int ActiveSceneIndex()
+    {
+        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+    }
 }

@@ -16,14 +16,7 @@ public class CutSceneStuff : MonoBehaviour
     public List<IEnumerator> events = new List<IEnumerator>();
 
     public bool isWalking;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            enemy.GetComponent<Enemy>().animated = true;
-            StartCoroutine(Cut3());
-        }
-    }
+
     public IEnumerator Cut1()
     {
         //færdig
@@ -34,13 +27,15 @@ public class CutSceneStuff : MonoBehaviour
     }
     public IEnumerator Cut2()
     {
-        enemy.GetComponent<Enemy>().animated = true;
-        Move(player.transform.position + new Vector3(1, 1, 0), false, true);
 
+        enemy.GetComponent<Enemy>().animated = true;
+        enemy.SetActive(true);
+        //Move(player.transform.position + new Vector3(1, 1, 0), false, true);
         yield return new WaitForSeconds(2);
-        Talk("Your Room is the second on the left. I'll bring some food at a later point, so do make yourself at home¨. But whatever you do Do Not Look through the Back Door! I'll be right back", false);
+        Talk("Phew, Quite some weather out there. I locked the front door, there might be yokai lurking in the shadows out there. Your Room is the second on the left. I'll bring some food at a later point, so do make yourself at home. But whatever you do \"Do Not Look through the Back Door! I'll be right back ", false);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
         enemy.GetComponent<Enemy>().animated = false;
+        Move(new Vector2(-10.52f, 4.4f), true, false);
     }
     public IEnumerator Cut3()
     {
