@@ -23,7 +23,7 @@ public class CutSceneManager : MonoBehaviour
         CutSceneEvent evs = new CutSceneEvent();
         evs.targetPosition = player.transform.position;
         evs.isMoveEvent = true;
-        evs.isTalkEvent = false;
+        evs.isTalkEvent = true;
         evs.speed = 3;
         evs.moveInstant = true;
         evs.eventDelay = 2;
@@ -34,10 +34,12 @@ public class CutSceneManager : MonoBehaviour
         cutScenes[0].events[0] = evs;
 
         CutSceneEvent evs2 = new CutSceneEvent();
-        evs.targetPosition = player.transform.position;
-        evs.isMoveEvent = false;
+        evs2.targetPosition = player.transform.position;
+        evs2.isMoveEvent = false;
+        evs2.isTalkEvent = true;
+
       //  evs.isTalkEvent = true;
-        evs.dialogText = "Hello Darling, the storm is rough these days and it seems to show no signs of stopping. Many people before you have ventured these paths along the mountain, only to find themselves lost in the horrid weather. It is my job to shelter these people... At the end of the road you find an old house in which I live. In there you can find warmth and a place to sleep. I'll Even prepare a delicious meal. You'll do well to watch out for anything suspicious though. There has been an increase in yokai sightings recently Follow me, I'll lead the way!";
+        evs2.dialogText = "Hello Darling, the storm is rough these days and it seems to show no signs of stopping. Many people before you have ventured these paths along the mountain, only to find themselves lost in the horrid weather. It is my job to shelter these people... At the end of the road you find an old house in which I live. In there you can find warmth and a place to sleep. I'll Even prepare a delicious meal. You'll do well to watch out for anything suspicious though. There has been an increase in yokai sightings recently Follow me, I'll lead the way!";
         cutScenes[0].events[1] = evs2;
 
     }
@@ -67,8 +69,6 @@ public class CutSceneEvent
 public class CutScene
 {
     public DialogueController dialogueController;
-    //private NavMeshAgent agent = GameObject.FindWithTag("Yamamba").GetComponent<NavMeshAgent>();
-
     public NavMeshAgent agent;
     public CutSceneEvent[] events;
     public GameObject player;
@@ -79,7 +79,6 @@ public class CutScene
         enemy.GetComponent<Enemy>().animated = true;
         foreach (CutSceneEvent ev in events)
         {
-            Debug.Log("Is talk?" + ev.isTalkEvent);
             enemy.GetComponent<Enemy>().animated = true;
             if (ev.playerCanMove == false)
             {
