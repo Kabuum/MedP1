@@ -28,7 +28,7 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         dialogField.SetActive(false);
-       
+        
     }
     public void OpenDialog(string text)
     {
@@ -40,7 +40,7 @@ public class DialogueController : MonoBehaviour
     public IEnumerator ShowDialogue(KeyCode key, string text, int maxChar)
     {
         int i = 0;
-        textSpeech.text = "";
+        textSpeech.text = "T";
         string[] words = text.Split(" ");
         for (i = 0; i < words.Length; i++)
         {
