@@ -23,95 +23,117 @@ public class PlayerBehavior : MonoBehaviour
     private bool moving = false;
     public UnityEvent openDoor;
     public GameObject ESprite;
+
     private Collider2D Interactable;
     public bool canMove;
 
+    public GameObject billboard;
+
+    bool isOnBillBoard = false;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
         Renderer = this.GetComponent<Renderer>();
+        billboard.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("interkey" + InteractKey);
+
         deltaspeed = speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.A))
+
+        if (billboard.activeInHierarchy == false)
         {
-            moving = true;
-            directionindex = 1;
-            PlayAnim(directionindex,moving,lantern);
-            this.transform.Translate(-deltaspeed, 0f, 0f);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            moving = true;
-            directionindex = 2;
-            PlayAnim(directionindex,moving,lantern);
-            this.transform.Translate(deltaspeed, 0f, 0f);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            moving = true;
-            directionindex = 3;
-            PlayAnim(directionindex,moving,lantern);
-            this.transform.Translate(0.0f, -deltaspeed, 0);
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            moving = true;
-            directionindex = 4;
-            PlayAnim(directionindex,moving,lantern);
-            this.transform.Translate(0.0f, deltaspeed, 0f);
-        }
-        else
-        {
-            moving = false;
-            PlayAnim(directionindex,moving,lantern);
+
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                moving = true;
+                directionindex = 1;
+                PlayAnim(directionindex, moving, lantern);
+                this.transform.Translate(-deltaspeed, 0f, 0f);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                moving = true;
+                directionindex = 2;
+                PlayAnim(directionindex, moving, lantern);
+                this.transform.Translate(deltaspeed, 0f, 0f);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                moving = true;
+                directionindex = 3;
+                PlayAnim(directionindex, moving, lantern);
+                this.transform.Translate(0.0f, -deltaspeed, 0);
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                moving = true;
+                directionindex = 4;
+                PlayAnim(directionindex, moving, lantern);
+                this.transform.Translate(0.0f, deltaspeed, 0f);
+            }
+            else
+            {
+                moving = false;
+                PlayAnim(directionindex, moving, lantern);
+            }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            InteractKey = true;
-            ElapsedTime = 0f;
-        }
-        if (WaitTime > ElapsedTime)
-        {
-            ElapsedTime += Time.deltaTime;
-        }
-        else
-        {
-            InteractKey = false;
-        }
+            if (isOnBillBoard == true)
+            {
+                if (billboard.activeInHierarchy == true)
+                {
+                    billboard.SetActive(false);
+                }
+                else { billboard.SetActive(true); }
+            }
+            if (WaitTime > ElapsedTime)
+            {
+                ElapsedTime += Time.deltaTime;
+            }
+            else
+            {
+                InteractKey = false;
+            }
 
-        if (Interactable != null && InteractKey == true)
-        {
-            interact();
+            if (Interactable != null && InteractKey == true)
+            {
+                Debug.Log("Helko");
+                interact();
+            }
         }
     }
-
     void interact()
     {
         if (Interactable.CompareTag("Billboard"))
         {
-            
+            Debug.Log("Hello");
+
+            billboard.SetActive(true);
+
         }
         else if (Interactable.CompareTag("Key1"))
         {
-            
+
         }
         else if (Interactable.CompareTag("Key2"))
         {
-            
+
         }
         else if (Interactable.CompareTag("Crowbar"))
         {
-            
+
         }
         else if (Interactable.CompareTag("Hiding Range"))
         {
-            
+
         }
     }
 
@@ -120,15 +142,14 @@ public class PlayerBehavior : MonoBehaviour
         if (coll.gameObject.CompareTag("Billboard"))
         {
             ESprite.SetActive(true);
-            coll = Interactable;
+            isOnBillBoard = true;
         }
         else if (coll.gameObject.CompareTag("Yamamba"))
-
         {
             SceneMangment.RestartScene();
         }
     }
-    
+
     private void OnTriggerStay2D(Collider2D coll)
     {
         if (InteractKey == true && coll.gameObject.CompareTag("Hiding Range"))
@@ -157,6 +178,7 @@ public class PlayerBehavior : MonoBehaviour
             myColor = new Color(1f, 1f, 1f, 1f);
             Renderer.material.color = myColor;
         }
+        isOnBillBoard = false;
     }
     void DestroyComponent()
     {
@@ -172,35 +194,35 @@ public class PlayerBehavior : MonoBehaviour
             if (lanternOn)
             {
                 switch (direction)
-                { 
-                    case 1: 
-                        PlayerAnimator.Play("PriestLantern-Walk-Left"); 
+                {
+                    case 1:
+                        PlayerAnimator.Play("PriestLantern-Walk-Left");
                         break;
-                    case 2: 
+                    case 2:
                         PlayerAnimator.Play("PriestLantern-Walk-Right");
                         break;
-                    case 3: 
+                    case 3:
                         PlayerAnimator.Play("PriestLantern-Walk-Down");
                         break;
-                    case 4: 
-                        PlayerAnimator.Play("PriestLantern-Walk-Up"); 
+                    case 4:
+                        PlayerAnimator.Play("PriestLantern-Walk-Up");
                         break;
                 }
             }
             else
             {
                 switch (direction)
-                { 
-                    case 1: 
+                {
+                    case 1:
                         PlayerAnimator.Play("Priest-Walk-Left");
                         break;
-                    case 2: 
+                    case 2:
                         PlayerAnimator.Play("Priest-Walk-Right");
                         break;
-                    case 3: 
+                    case 3:
                         PlayerAnimator.Play("Priest-Walk-Down");
                         break;
-                    case 4: 
+                    case 4:
                         PlayerAnimator.Play("Priest-Walk-Up");
                         break;
                 }
@@ -211,17 +233,17 @@ public class PlayerBehavior : MonoBehaviour
             if (lanternOn)
             {
                 switch (direction)
-                { 
-                    case 1: 
+                {
+                    case 1:
                         PlayerAnimator.Play("PriestLantern-Left");
                         break;
-                    case 2: 
+                    case 2:
                         PlayerAnimator.Play("PriestLantern-Right");
                         break;
-                    case 3: 
+                    case 3:
                         PlayerAnimator.Play("PriestLantern-Down");
                         break;
-                    case 4: 
+                    case 4:
                         PlayerAnimator.Play("PriestLantern-Up");
                         break;
                 }

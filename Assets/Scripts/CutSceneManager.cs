@@ -132,5 +132,4 @@ public class CutScene
         enemy.GetComponent<Enemy>().animated = false;
         enemy.GetComponent<Enemy>().DestinationUpdate();
     }
-    //Unityevent add listner for CutSceneIEnumartori
 }
