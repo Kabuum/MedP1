@@ -15,6 +15,11 @@ TagManager:
   - Key2
   - Crowbar
   - GameManager
+  - DoorToInside
+  - Staircase to cellar 1
+  - Staircase up before allowed
+  - Bed
+  - Cellardoorwaitforkey
   layers:
   - Default
   - TransparentFX
