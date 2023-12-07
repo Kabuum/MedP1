@@ -20,6 +20,7 @@ TagManager:
   - Staircase up before allowed
   - Bed
   - Cellardoorwaitforkey
+  - StaircaseUpFromCellar
   layers:
   - Default
   - TransparentFX
