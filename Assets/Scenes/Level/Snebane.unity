@@ -335,6 +335,8 @@ MonoBehaviour:
   ESprite: {fileID: 2057514297}
   canMove: 0
   billboard: {fileID: 709921810}
+  GameManager: {fileID: 1449358801}
+  Yamamba: {fileID: 906541211}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -7244,7 +7246,7 @@ GameObject:
   - component: {fileID: 1449358802}
   - component: {fileID: 1449358804}
   m_Layer: 0
-  m_Name: Dialog
+  m_Name: GameManager
   m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7291,12 +7293,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449358801}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768c3d7ec46de0447bd9201648354018, type: 3}
+  m_Script: {fileID: 11500000, guid: 90166ecc804563e44aeb9fda4f716ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 906541211}
   player: {fileID: 230440567}
+  dialogueController: {fileID: 1449358802}
+  isWalking: 0
 --- !u!1 &1568250279
 GameObject:
   m_ObjectHideFlags: 0
