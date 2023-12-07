@@ -33,6 +33,9 @@ public class PlayerBehavior : MonoBehaviour
     bool doorclose;
     GameObject doorObject;
 
+    public GameObject GameManager;
+    public GameObject Yamamba;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +103,10 @@ public class PlayerBehavior : MonoBehaviour
                 if (billboard.activeInHierarchy == true)
                 {
                     billboard.SetActive(false);
+                    Yamamba.SetActive(true);
+                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut1());
+
+
                 }
                 else { billboard.SetActive(true); }
             }
