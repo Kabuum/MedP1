@@ -30,13 +30,20 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject billboard;
 
     bool isOnBillBoard = false;
+    bool doorclose;
+    GameObject doorObject;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
         Renderer = this.GetComponent<Renderer>();
-        billboard.SetActive(false);
+        if (billboard != null)
+        {
+
+
+            billboard.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -46,7 +53,9 @@ public class PlayerBehavior : MonoBehaviour
 
         deltaspeed = speed * Time.deltaTime;
 
-        if (billboard.activeInHierarchy == false)
+
+
+        if (billboard == null || billboard.activeInHierarchy == false)
         {
 
 
@@ -159,7 +168,7 @@ public class PlayerBehavior : MonoBehaviour
             Debug.Log("Hidden");
             Renderer.material.color = myColor;
         }
-        if (InteractKey == true && coll.gameObject.CompareTag("Doors"))
+        if (Input.GetKeyDown(KeyCode.E) && coll.gameObject.CompareTag("Doors"))
         {
             openDoor.Invoke();
         }
