@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e7346347e934774594ab9b0d42903e0
+guid: 35c87caebf8af3e43b12b39b16ea557a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,70 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corpses_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f7e2c34a50437547940434bb20aa9b3
-      internalID: 562348762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corpses_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b89a5ba3d15dcf54e9c5ca5d406d1bb2
-      internalID: 317624160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corpses_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cf106eca5d325646b96f82ddde3450a
-      internalID: 1182810519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corpses_3
+      name: Bed_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cfec015fc1127f43a7628fb0115770d
-      internalID: -662954291
+      spriteID: 897584238cdb8a943b566ff7acda8ded
+      internalID: 1079346285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corpses_4
+      name: Bed_1
       rect:
         serializedVersion: 2
         x: 32
@@ -208,29 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b45c018a52bcdd4db563f194a0cd180
-      internalID: 1157296196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corpses_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 314b1358d856e56489f114e4b6afcc1c
-      internalID: 623711049
+      spriteID: 009faa26fe3a54345b25eb6277e0a767
+      internalID: -169475479
       vertices: []
       indices: 
       edges: []
@@ -246,12 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Corpses_0: 562348762
-      Corpses_1: 317624160
-      Corpses_2: 1182810519
-      Corpses_3: -662954291
-      Corpses_4: 1157296196
-      Corpses_5: 623711049
+      Bed_0: 1079346285
+      Bed_1: -169475479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
