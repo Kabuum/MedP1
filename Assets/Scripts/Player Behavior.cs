@@ -76,14 +76,6 @@ public class PlayerBehavior : MonoBehaviour
             InteractKey = true;
             ElapsedTime = 0f;
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
         if (WaitTime > ElapsedTime)
         {
             ElapsedTime += Time.deltaTime;
@@ -91,6 +83,11 @@ public class PlayerBehavior : MonoBehaviour
         else
         {
             InteractKey = false;
+        }
+
+        if (Interactable != null && InteractKey == true)
+        {
+            interact();
         }
     }
 
@@ -150,6 +147,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Billboard"))
         {
+            ESprite.SetActive(false);
             Interactable = null;
         }
         if (coll.gameObject.CompareTag("HidingRange") && Hidden == true)
