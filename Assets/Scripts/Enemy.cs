@@ -47,8 +47,11 @@ public class Enemy : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target) < 0.5f && !PlayerSpotted && animated == false)
         {
-            NextWaypoint();
-            DestinationUpdate();
+            if (animated == false)
+            {
+                NextWaypoint();
+                DestinationUpdate();
+            }
         }
         else if (Vector3.Distance(transform.position, target) < 0.5f && PlayerSpotted && animated == false)
         {
