@@ -55,10 +55,13 @@ public class CutSceneStuff : MonoBehaviour
     public IEnumerator Cut4()
     {
         Transformation(false);
+        yield return new WaitWhile(() => enemy.GetComponent<Enemy>().transformationDone == false);
         yield break;
     }
     public IEnumerator Cut5()
     {
+        Talk("bruh", false);
+        yield return new WaitWhile(() => dialogueController.dialogDone == false);
         yield break;
     }
 

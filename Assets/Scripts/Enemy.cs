@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     public UnityEvent openDoor;
 
     public DetectionTriangle triScript;
+    public bool transformationDone;
 
 
     // Start is called before the first frame update
