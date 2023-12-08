@@ -54,6 +54,10 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
+        }
         deltaspeed = speed * Time.deltaTime;
         if (billboard == null || billboard.activeInHierarchy == false)
         {

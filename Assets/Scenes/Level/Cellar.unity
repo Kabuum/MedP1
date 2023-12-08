@@ -400,6 +400,8 @@ MonoBehaviour:
   ESprite: {fileID: 2057514297}
   canMove: 0
   billboard: {fileID: 0}
+  GameManager: {fileID: 1449358801}
+  Yamamba: {fileID: 906541211}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -1443,8 +1445,13 @@ MonoBehaviour:
   Player: {fileID: 230440568}
   runspeed: 1.3
   walkspeed: 0.5
+  Monster: 0
   Lantern: 1
   animated: 0
+  dontFollow: 0
+  Transformation: 0
+  TransformIsDone: 0
+  IsTransforming: 0
   openDoor:
     m_PersistentCalls:
       m_Calls:
@@ -1497,6 +1504,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triScript: {fileID: 1203806602}
+  transformationDone: 0
 --- !u!195 &906541213
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2710,6 +2718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449358803}
   - component: {fileID: 1449358802}
+  - component: {fileID: 1449358805}
   - component: {fileID: 1449358804}
   m_Layer: 0
   m_Name: Dialog
@@ -2717,7 +2726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1449358802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,10 +2770,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1449358801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768c3d7ec46de0447bd9201648354018, type: 3}
+  m_Script: {fileID: 11500000, guid: 90166ecc804563e44aeb9fda4f716ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 906541211}
   player: {fileID: 230440567}
+  dialogueController: {fileID: 1449358802}
+  isWalking: 0
+--- !u!114 &1449358805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449358801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced859ab48ffaba4aaf12cc15f9aeb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461238607
 GameObject:
   m_ObjectHideFlags: 0
@@ -4508,7 +4532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1880302412
 MonoBehaviour:
   m_ObjectHideFlags: 0

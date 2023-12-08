@@ -122,7 +122,8 @@ public class Enemy : MonoBehaviour
         }
     }
     public void TransformToMonster()
-    { //Her skal player �ndre skin til monster. 
+    {
+        Transformation = true; 
     }
     void NextWaypoint()
     {

@@ -2127,6 +2127,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triScript: {fileID: 1203806602}
+  transformationDone: 0
 --- !u!195 &906541213
 NavMeshAgent:
   m_ObjectHideFlags: 0
