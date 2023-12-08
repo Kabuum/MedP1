@@ -57,43 +57,44 @@ public class PlayerBehavior : MonoBehaviour
         deltaspeed = speed * Time.deltaTime;
 
 
-
+        Debug.Log("can move" + canMove);
         if (billboard == null || billboard.activeInHierarchy == false)
         {
-
-
-            if (Input.GetKey(KeyCode.A))
+            if (canMove == true)
             {
-                moving = true;
-                directionindex = 1;
-                PlayAnim(directionindex, moving, lantern);
-                this.transform.Translate(-deltaspeed, 0f, 0f);
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                moving = true;
-                directionindex = 2;
-                PlayAnim(directionindex, moving, lantern);
-                this.transform.Translate(deltaspeed, 0f, 0f);
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                moving = true;
-                directionindex = 3;
-                PlayAnim(directionindex, moving, lantern);
-                this.transform.Translate(0.0f, -deltaspeed, 0);
-            }
-            else if (Input.GetKey(KeyCode.W))
-            {
-                moving = true;
-                directionindex = 4;
-                PlayAnim(directionindex, moving, lantern);
-                this.transform.Translate(0.0f, deltaspeed, 0f);
-            }
-            else
-            {
-                moving = false;
-                PlayAnim(directionindex, moving, lantern);
+                if (Input.GetKey(KeyCode.A))
+                {
+                    moving = true;
+                    directionindex = 1;
+                    PlayAnim(directionindex, moving, lantern);
+                    this.transform.Translate(-deltaspeed, 0f, 0f);
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    moving = true;
+                    directionindex = 2;
+                    PlayAnim(directionindex, moving, lantern);
+                    this.transform.Translate(deltaspeed, 0f, 0f);
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    moving = true;
+                    directionindex = 3;
+                    PlayAnim(directionindex, moving, lantern);
+                    this.transform.Translate(0.0f, -deltaspeed, 0);
+                }
+                else if (Input.GetKey(KeyCode.W))
+                {
+                    moving = true;
+                    directionindex = 4;
+                    PlayAnim(directionindex, moving, lantern);
+                    this.transform.Translate(0.0f, deltaspeed, 0f);
+                }
+                else
+                {
+                    moving = false;
+                    PlayAnim(directionindex, moving, lantern);
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.E))
@@ -121,7 +122,7 @@ public class PlayerBehavior : MonoBehaviour
 
             if (Interactable != null && InteractKey == true)
             {
-                Debug.Log("Helko");
+
                 interact();
             }
         }
@@ -162,7 +163,10 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (coll.gameObject.CompareTag("Yamamba"))
         {
-            SceneMangment.RestartScene();
+            if (coll.gameObject.GetComponent<Enemy>().dontFollow == false)
+            {
+                SceneMangment.RestartScene();
+            }
         }
     }
 

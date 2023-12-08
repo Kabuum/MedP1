@@ -20,11 +20,11 @@ public class Enemy : MonoBehaviour
     private bool Monster = false;
     public bool Lantern = false;
     public bool animated = false;
+    public bool dontFollow;
 
     public UnityEvent openDoor;
 
     public DetectionTriangle triScript;
-
 
 
     // Start is called before the first frame update
@@ -41,9 +41,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("animated : " + animated);
-        Debug.Log(agent.destination);
-        PlayerSpotted = triScript.CheckInSight();
+        if (dontFollow == false)
+        {
+            PlayerSpotted = triScript.CheckInSight();
+        }
 
         if (Vector3.Distance(transform.position, target) < 0.5f && !PlayerSpotted && animated == false)
         {
