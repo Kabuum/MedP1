@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 230440567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.25, y: 7, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -236,8 +236,11 @@ MonoBehaviour:
   ESprite: {fileID: 2057514297}
   canMove: 0
   billboard: {fileID: 0}
+  poster: {fileID: 0}
   GameManager: {fileID: 0}
+  tableLatern: {fileID: 0}
   Yamamba: {fileID: 0}
+  laternLight: {fileID: 0}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -716,7 +719,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402531905}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -841,7 +844,7 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.8}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
@@ -885,7 +888,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -9
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1901,10 +1904,15 @@ MonoBehaviour:
   - {fileID: 1533437548}
   PlayerSpotted: 0
   Player: {fileID: 230440568}
-  runspeed: 1
+  runspeed: 1.2
   walkspeed: 0.5
+  Monster: 1
   Lantern: 0
   animated: 0
+  dontFollow: 0
+  Transformation: 0
+  TransformIsDone: 0
+  IsTransforming: 0
   openDoor:
     m_PersistentCalls:
       m_Calls:
@@ -1957,6 +1965,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triScript: {fileID: 1203806602}
+  transformationDone: 0
 --- !u!195 &906541213
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1988,7 +1997,7 @@ Transform:
   m_GameObject: {fileID: 906541211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.47, y: 17.6, z: 0}
+  m_LocalPosition: {x: -7.59, y: 6.05, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2031,7 +2040,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.72}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2042,7 +2051,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.55, y: 3}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &906541217
 Rigidbody2D:
@@ -2101,8 +2110,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.987, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2114161997}
+  m_Children: []
   m_Father: {fileID: 906541215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &939892910
@@ -2531,7 +2539,7 @@ MonoBehaviour:
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: a74f097c98e9d7d4aa86b82b342ac1eb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 984f0bfcf20f40449bce6a11fbe272df, type: 2}
 --- !u!1 &1197026862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c3d7ec46de0447bd9201648354018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 230440567}
 --- !u!1 &1452424475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3132,7 @@ Transform:
   m_GameObject: {fileID: 1452424475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.73, y: 23.84, z: 0}
+  m_LocalPosition: {x: 1.43, y: 1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3284,7 +3291,7 @@ Transform:
   m_GameObject: {fileID: 1533437547}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.34, y: 21.62, z: 0}
+  m_LocalPosition: {x: -3.12, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3324,7 +3331,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -3629,7 +3636,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4a4d60338656b604db1a18a9b418ad52, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3733,7 +3740,7 @@ MonoBehaviour:
   Chase: {fileID: 8300000, guid: 98a8e62343ab1bb43a47fa4f8ada13e6, type: 3}
   player: {fileID: 230440567}
   Yamamba: {fileID: 906541211}
-  ActivateMusic: 0
+  ActivateMusic: 1
 --- !u!1 &1801630826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5389,7 +5396,7 @@ Transform:
   m_GameObject: {fileID: 1858606355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.71, y: 22.89, z: 0}
+  m_LocalPosition: {x: 0.48, y: 5.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5674,7 +5681,7 @@ Transform:
   m_GameObject: {fileID: 1923914278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.66, y: 17.55, z: 0}
+  m_LocalPosition: {x: -6.67, y: 5.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5856,88 +5863,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2114161996
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2114161997}
-  - component: {fileID: 2114161998}
-  m_Layer: 0
-  m_Name: Light 2D (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2114161997
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114161996}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 939892909}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2114161998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114161996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ComponentVersion: 1
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0, b: 0.14640236, a: 1}
-  m_Intensity: 1
-  m_LightVolumeIntensity: 0.1
-  m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: -3150417103705471851, guid: 488677eea8a046f40b9e1ffbeb254c1e, type: 3}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 5
-  m_NormalMapQuality: 0
-  m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.693
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 359.99997
-  m_PointLightOuterAngle: 359.99997
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -2, y: -2, z: 0}
-  - {x: 2.2297063, y: -1.444441, z: 0}
-  - {x: 1.200372, y: 2.5162222, z: 0}
-  - {x: -2, y: 0, z: 0}
 --- !u!1 &2135440409
 GameObject:
   m_ObjectHideFlags: 0
