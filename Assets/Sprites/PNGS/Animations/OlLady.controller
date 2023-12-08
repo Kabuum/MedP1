@@ -34,7 +34,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State
+  m_Name: Yamauba-Left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -206,7 +206,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 7
+  m_Name: Yamauba-Transformation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -233,7 +233,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 1
+  m_Name: Yamauba-Down
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -361,7 +361,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 3
+  m_Name: Yamauba-Up
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -435,7 +435,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 4
+  m_Name: Yamauba-Walk-Up
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -577,7 +577,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 5
+  m_Name: Yamauba-Right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -603,7 +603,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 2
+  m_Name: Yamauba-Walk-Down
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -940,7 +940,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 0
+  m_Name: Yamauba-Walk-Left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -967,7 +967,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State 6
+  m_Name: Yamauba-Walk-Right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -981,7 +981,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ebace09d7318ea5478a44e674831b97f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 836023d93fa4a4b4f8fa898dea3c1c95, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

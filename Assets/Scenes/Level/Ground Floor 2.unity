@@ -2071,7 +2071,6 @@ MonoBehaviour:
   Player: {fileID: 230440568}
   runspeed: 1
   walkspeed: 0.5
-  Monster: 0
   Lantern: 0
   animated: 0
   dontFollow: 0
@@ -4015,7 +4014,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4a4d60338656b604db1a18a9b418ad52, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
