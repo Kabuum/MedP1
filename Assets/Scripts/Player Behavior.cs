@@ -55,9 +55,6 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         deltaspeed = speed * Time.deltaTime;
-
-
-        Debug.Log("can move" + canMove);
         if (billboard == null || billboard.activeInHierarchy == false)
         {
             if (canMove == true)

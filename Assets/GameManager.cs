@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        if (SceneMangment.ActiveSceneIndex() == 1)
+        if (SceneMangment.ActiveSceneIndex() == 2)
         {
         
             StartCoroutine(gameObject.GetComponent<CutSceneStuff>().Cut2());
