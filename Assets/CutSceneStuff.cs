@@ -33,7 +33,7 @@ public class CutSceneStuff : MonoBehaviour
         enemy.GetComponent<Enemy>().dontFollow = true;
         enemy.SetActive(true);
         //Move(player.transform.position + new Vector3(1, 1, 0), false, true);
-       // yield return new WaitForSeconds(2);
+        // yield return new WaitForSeconds(2);
         Talk("Phew, Quite some weather out there. I locked the front door, there might be yokai lurking in the shadows out there. Your Room is the second on the left. I'll bring some food at a later point, so do make yourself at home. But whatever you do \"Do Not Look through the Back Door! I'll be right back ", false);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
         enemy.GetComponent<Enemy>().animated = false;
@@ -57,14 +57,17 @@ public class CutSceneStuff : MonoBehaviour
     {
         enemy.SetActive(true);
         camera.GetComponent<CamScript>().followYamauba = true;
-        Move(new Vector2(-1f, 0f),false,false);
+        Move(new Vector2(-1f, 0f), false, false);
         yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, new Vector2(-1f, 0f)) <= 0.5f);
         Transformation(false);
-        enemy.GetComponent<Enemy>().TransformIsDone = false;
+        enemy.GetComponent<Enemy>().animated = true;
+        enemy.GetComponent<Enemy>().transformationDone = false;
         enemy.GetComponent<Enemy>().TransformToMonster();
-        yield return new WaitUntil(() => enemy.GetComponent<Enemy>().TransformIsDone == true);
-        Move(new Vector2(-1.57f,6.38f),true,false);
-        yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position,new Vector2(-1.57f,6.38f)) <= 0.5f);
+
+        yield return new WaitUntil(() => enemy.GetComponent<Enemy>().transformationDone == true);
+        enemy.GetComponent<Enemy>().animated = false;
+        Move(new Vector2(-1.57f, 6.38f), true, false);
+        yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, new Vector2(-1.57f, 6.38f)) <= 0.5f);
         camera.GetComponent<CamScript>().followYamauba = false;
         enemy.SetActive(false);
         yield break;
