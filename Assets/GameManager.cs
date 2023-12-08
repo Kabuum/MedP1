@@ -14,10 +14,4 @@ public class GameManager : MonoBehaviour
             StartCoroutine(gameObject.GetComponent<CutSceneStuff>().Cut2());
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

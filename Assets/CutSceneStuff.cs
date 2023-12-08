@@ -55,6 +55,8 @@ public class CutSceneStuff : MonoBehaviour
     public IEnumerator Cut4()
     {
         Transformation(false);
+        enemy.GetComponent<Enemy>().transformationDone = false;
+        enemy.GetComponent<Enemy>().TransformToMonster();
         yield return new WaitWhile(() => enemy.GetComponent<Enemy>().transformationDone == false);
         yield break;
     }

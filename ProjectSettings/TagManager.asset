@@ -21,6 +21,7 @@ TagManager:
   - Bed
   - Cellardoorwaitforkey
   - StaircaseUpFromCellar
+  - Missing Posters
   layers:
   - Default
   - TransparentFX
