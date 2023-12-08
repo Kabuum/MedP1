@@ -11,6 +11,9 @@ public class TileEraser : MonoBehaviour
 {
     [Tooltip("Tilemap containig only doors must be added from the scene")]
     public Tilemap doorTileMap;
+    public AudioSource doorSound;
+
+
 
     public void OpenDoor()
     {
@@ -21,9 +24,11 @@ public class TileEraser : MonoBehaviour
         Vector3Int tilePos = doorTileMap.WorldToCell(transform.position);
         if (doorTileMap.HasTile(tilePos) != false)
         {
+            doorSound.Play();
             Vector3Int oldTilePos;
             oldTilePos = tilePos;
             TileBase oldTile = doorTileMap.GetTile(tilePos);
+            yield return new WaitUntil(() => doorSound.isPlaying == false);
             doorTileMap.SetTile(tilePos, null);
             yield return new WaitForSeconds(seconds);
             doorTileMap.SetTile(oldTilePos, oldTile); 
