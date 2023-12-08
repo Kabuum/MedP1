@@ -25,7 +25,7 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject ESprite;
 
     private Collider2D Interactable;
-    public bool canMove;
+    public bool canMove = true;
 
     public GameObject billboard;
 
@@ -35,10 +35,12 @@ public class PlayerBehavior : MonoBehaviour
 
     public GameObject GameManager;
     public GameObject Yamamba;
+    bool billboardOpen = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
         PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
         Renderer = this.GetComponent<Renderer>();
         if (billboard != null)
@@ -97,15 +99,14 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (isOnBillBoard == true)
+            if (isOnBillBoard == true && billboardOpen == false)
             {
-                if (billboard.activeInHierarchy == true)
+                if (billboard.activeInHierarchy == true && billboardOpen == false)
                 {
                     billboard.SetActive(false);
                     Yamamba.SetActive(true);
                     StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut1());
-
-
+                    billboardOpen = true;
                 }
                 else { billboard.SetActive(true); }
             }
@@ -127,14 +128,7 @@ public class PlayerBehavior : MonoBehaviour
     }
     void interact()
     {
-        if (Interactable.CompareTag("Billboard"))
-        {
-            Debug.Log("Hello");
-
-            billboard.SetActive(true);
-
-        }
-        else if (Interactable.CompareTag("Key1"))
+        if (Interactable.CompareTag("Key1"))
         {
 
         }
@@ -154,7 +148,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("Billboard"))
+        if (coll.gameObject.CompareTag("Billboard") && billboardOpen == false)
         {
             ESprite.SetActive(true);
             isOnBillBoard = true;
@@ -188,6 +182,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             ESprite.SetActive(false);
             Interactable = null;
+
         }
         if (coll.gameObject.CompareTag("HidingRange") && Hidden == true)
         {

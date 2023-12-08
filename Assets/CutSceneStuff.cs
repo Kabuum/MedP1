@@ -23,7 +23,7 @@ public class CutSceneStuff : MonoBehaviour
         enemy.GetComponent<Enemy>().animated = true;
         Talk("Hello Darling, the storm is rough these days and it seems to show no signs of stopping. Many people before you have ventured these paths along the mountain, only to find themselves lost in the horrid weather. It is my job to shelter these people... At the end of the road you find an old house in which I live. In there you can find warmth and a place to sleep. I'll Even prepare a delicious meal. You'll do well to watch out for anything suspicious though. There has been an increase in yokai sightings recently Follow me, I'll lead the way!", false);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
-        Move(new Vector2(22.9f, -9.8f), false, false);
+        Move(new Vector2(22.9f, -9.8f), true, false);
     }
     public IEnumerator Cut2()
     {
