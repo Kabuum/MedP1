@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public float walkspeed = 0.5f;
     private int DirectionIndex = 0;
     private Animator EnemyAnimator;
-    private bool Monster = false;
+    public bool Monster = false;
     public bool Lantern = false;
     public bool animated = false;
     public bool dontFollow;
@@ -65,7 +65,18 @@ public class Enemy : MonoBehaviour
         }
 
         Vector3 AgentVel = agent.velocity;
-        if (MathF.Abs(AgentVel.x) > MathF.Abs(AgentVel.y)) // left and right
+        if (Mathf.Abs(AgentVel.x) < 0.001f && Mathf.Abs(AgentVel.y) < 0.001f)
+        {
+            if (Lantern)
+            {
+                EnemyAnimator.Play("OlLadyLantern-Down");
+            }
+            else
+            {
+                EnemyAnimator.Play("OlLady-Down");
+            }
+        }
+        else if (MathF.Abs(AgentVel.x) > MathF.Abs(AgentVel.y)) // left and right
         {
             if (AgentVel.x >= 0) //right
             {
@@ -75,6 +86,7 @@ public class Enemy : MonoBehaviour
             {
                 DirectionIndex = 2;// 2 is left
             }
+            EnemyAnim(DirectionIndex,Lantern,Monster);
         }
         else//up and down
         {
@@ -86,11 +98,11 @@ public class Enemy : MonoBehaviour
             {
                 DirectionIndex = 4;// 4 is down
             }
+            EnemyAnim(DirectionIndex,Lantern,Monster);
         }
-        EnemyAnim(DirectionIndex, Lantern, Monster);
     }
     public void TransformToMonster()
-    { //Her skal player ændre skin til monster. 
+    { //Her skal player ï¿½ndre skin til monster. 
     }
     void NextWaypoint()
     {
@@ -123,16 +135,20 @@ public class Enemy : MonoBehaviour
             switch (direction)
             {
                 case 1:
-
+                    EnemyAnimator.Play("Yamauba-Walk-Right");
+                    triScript.UpdateDetectionAngle(90);
                     break;
                 case 2:
-
+                    EnemyAnimator.Play("Yamauba-Walk-Left");
+                    triScript.UpdateDetectionAngle(270);
                     break;
                 case 3:
-
+                    EnemyAnimator.Play("Yamauba-Walk-Up");
+                    triScript.UpdateDetectionAngle(180);
                     break;
                 case 4:
-
+                    EnemyAnimator.Play("Yamauba-Walk-Down");
+                    triScript.UpdateDetectionAngle(0);
                     break;
             }
         }
