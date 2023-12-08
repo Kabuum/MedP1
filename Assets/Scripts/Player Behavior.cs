@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using System.Transactions;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
 
 public class PlayerBehavior : MonoBehaviour
@@ -28,14 +30,21 @@ public class PlayerBehavior : MonoBehaviour
     public bool canMove = true;
 
     public GameObject billboard;
+    public GameObject poster;
 
     bool isOnBillBoard = false;
+    bool isOnPoster = false;
+    bool posterOpen = false;
     bool doorclose;
     GameObject doorObject;
 
     public GameObject GameManager;
+    public GameObject tableLatern;
     public GameObject Yamamba;
     bool billboardOpen = false;
+
+    public GameObject laternLight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +54,15 @@ public class PlayerBehavior : MonoBehaviour
         Renderer = this.GetComponent<Renderer>();
         if (billboard != null)
         {
-
-
             billboard.SetActive(false);
+        }
+        if (poster != null)
+        {
+            poster.SetActive(false);
+        }
+        if (laternLight != null)
+        {
+            laternLight.SetActive(false);
         }
     }
 
@@ -111,48 +126,68 @@ public class PlayerBehavior : MonoBehaviour
                 }
                 else { billboard.SetActive(true); }
             }
-            if (WaitTime > ElapsedTime)
+            else if (isOnPoster == true || posterOpen == true)
             {
-                ElapsedTime += Time.deltaTime;
-            }
-            else
-            {
-                InteractKey = false;
-            }
+                if (isOnPoster == true && posterOpen == false)
+                {
+                    poster.SetActive(true);
+                    posterOpen = true;
+                }
+                else if (posterOpen == true && isOnPoster || !isOnPoster)
+                {
+                    poster.SetActive(false);
+                    posterOpen = false;
+                    lantern = true;
+                    Destroy(tableLatern);
+                    laternLight.SetActive(true);
+                }
+                if (WaitTime > ElapsedTime)
+                {
+                    ElapsedTime += Time.deltaTime;
+                }
+                else
+                {
+                    InteractKey = false;
+                }
 
-            if (Interactable != null && InteractKey == true)
+                if (Interactable != null && InteractKey == true)
+                {
+
+                    interact();
+                }
+            }
+        }
+        void interact()
+        {
+            if (Interactable.CompareTag("Key1"))
             {
 
-                interact();
+            }
+            else if (Interactable.CompareTag("Key2"))
+            {
+
+            }
+            else if (Interactable.CompareTag("Crowbar"))
+            {
+
+            }
+            else if (Interactable.CompareTag("Hiding Range"))
+            {
+
             }
         }
     }
-    void interact()
-    {
-        if (Interactable.CompareTag("Key1"))
-        {
-
-        }
-        else if (Interactable.CompareTag("Key2"))
-        {
-
-        }
-        else if (Interactable.CompareTag("Crowbar"))
-        {
-
-        }
-        else if (Interactable.CompareTag("Hiding Range"))
-        {
-
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Billboard") && billboardOpen == false)
         {
             ESprite.SetActive(true);
             isOnBillBoard = true;
+        }
+        if (coll.gameObject.CompareTag("MissingPoster"))
+        {
+            isOnPoster = true;
+
         }
         else if (coll.gameObject.CompareTag("Yamamba"))
         {
@@ -162,7 +197,6 @@ public class PlayerBehavior : MonoBehaviour
             }
         }
     }
-
     private void OnTriggerStay2D(Collider2D coll)
     {
         if (InteractKey == true && coll.gameObject.CompareTag("Hiding Range"))
@@ -179,12 +213,7 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.CompareTag("Billboard"))
-        {
-            ESprite.SetActive(false);
-            Interactable = null;
 
-        }
         if (coll.gameObject.CompareTag("HidingRange") && Hidden == true)
         {
             Hidden = false;
@@ -192,15 +221,24 @@ public class PlayerBehavior : MonoBehaviour
             myColor = new Color(1f, 1f, 1f, 1f);
             Renderer.material.color = myColor;
         }
+        if (coll.gameObject.CompareTag("MissingPoster") && posterOpen == true)
+        {
+            isOnPoster = false;
+          
+            poster.SetActive(false);
+            posterOpen = false;
+            lantern = true;
+            laternLight.SetActive(true);
+            Destroy(tableLatern);
+        }
         isOnBillBoard = false;
+        isOnPoster = false;
     }
     void DestroyComponent()
     {
         Destroy(door.GetComponent<BoxCollider2D>());
         Debug.Log("Door Open");
-
     }
-
     void PlayAnim(int direction, bool isMoving, bool lanternOn)
     {
         if (isMoving == true)
