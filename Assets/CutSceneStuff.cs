@@ -12,6 +12,7 @@ public class CutSceneStuff : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject player;
+    public GameObject camera;
     public DialogueController dialogueController;
     public List<IEnumerator> events = new List<IEnumerator>();
 
@@ -19,7 +20,7 @@ public class CutSceneStuff : MonoBehaviour
 
     public IEnumerator Cut1()
     {
-        //færdig
+        //fï¿½rdig
         enemy.GetComponent<Enemy>().animated = true;
         Talk("Hello Darling, the storm is rough these days and it seems to show no signs of stopping. Many people before you have ventured these paths along the mountain, only to find themselves lost in the horrid weather. It is my job to shelter these people... At the end of the road you find an old house in which I live. In there you can find warmth and a place to sleep. I'll Even prepare a delicious meal. You'll do well to watch out for anything suspicious though. There has been an increase in yokai sightings recently Follow me, I'll lead the way!", false);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
@@ -43,7 +44,7 @@ public class CutSceneStuff : MonoBehaviour
     {
         enemy.GetComponent<Enemy>().animated = true;
         enemy.GetComponent<Enemy>().dontFollow = true;
-        Talk("Your Room is the second on the left. I'll bring some food at a later point, so do make yourself at home¨. But whatever you do Do Not Look through the Back Door! I'll be right back", false);
+        Talk("Your Room is the second on the left. I'll bring some food at a later point, so do make yourself at homeï¿½. But whatever you do Do Not Look through the Back Door! I'll be right back", false);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
         // Move(player.transform.position + new Vector3(1, 1, 0), false, true);
         yield return new WaitForSeconds(2);
@@ -54,10 +55,18 @@ public class CutSceneStuff : MonoBehaviour
     }
     public IEnumerator Cut4()
     {
+        enemy.SetActive(true);
+        camera.GetComponent<CamScript>().followYamauba = true;
+        Move(new Vector2(-1f, 0f),false,false);
+        yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, new Vector2(-1f, 0f)) <= 0.5f);
         Transformation(false);
-        enemy.GetComponent<Enemy>().transformationDone = false;
+        enemy.GetComponent<Enemy>().TransformIsDone = false;
         enemy.GetComponent<Enemy>().TransformToMonster();
-        yield return new WaitWhile(() => enemy.GetComponent<Enemy>().transformationDone == false);
+        yield return new WaitUntil(() => enemy.GetComponent<Enemy>().TransformIsDone == true);
+        Move(new Vector2(-1.57f,6.38f),true,false);
+        yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position,new Vector2(-1.57f,6.38f)) <= 0.5f);
+        camera.GetComponent<CamScript>().followYamauba = false;
+        enemy.SetActive(false);
         yield break;
     }
     public IEnumerator Cut5()

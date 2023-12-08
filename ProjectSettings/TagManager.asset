@@ -22,6 +22,8 @@ TagManager:
   - Cellardoorwaitforkey
   - StaircaseUpFromCellar
   - MissingPoster
+  - RevealRoom
+  - DeathNote
   layers:
   - Default
   - TransparentFX

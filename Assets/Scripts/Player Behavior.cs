@@ -36,13 +36,15 @@ public class PlayerBehavior : MonoBehaviour
     bool isOnPoster = false;
     bool posterOpen = false;
     bool doorclose;
+    bool isOnNote;
+    bool noteOpen;
     GameObject doorObject;
 
     public GameObject GameManager;
     public GameObject tableLatern;
     public GameObject Yamamba;
     bool billboardOpen = false;
-
+    public GameObject deathNote;
     public GameObject laternLight;
 
 
@@ -115,6 +117,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
+            
             if (isOnBillBoard == true && billboardOpen == false)
             {
                 if (billboard.activeInHierarchy == true && billboardOpen == false)
@@ -133,7 +136,7 @@ public class PlayerBehavior : MonoBehaviour
                     poster.SetActive(true);
                     posterOpen = true;
                 }
-                else if (posterOpen == true && isOnPoster || !isOnPoster)
+                else if (posterOpen == true)
                 {
                     poster.SetActive(false);
                     posterOpen = false;
@@ -141,20 +144,31 @@ public class PlayerBehavior : MonoBehaviour
                     Destroy(tableLatern);
                     laternLight.SetActive(true);
                 }
-                if (WaitTime > ElapsedTime)
+            }
+            else if (isOnNote || noteOpen)
+            { 
+                if (isOnNote && noteOpen == false)
                 {
-                    ElapsedTime += Time.deltaTime;
+                    canMove = false;
+                    deathNote.gameObject.SetActive(true);
+                    noteOpen = true;
                 }
-                else
+                else if (noteOpen)
                 {
-                    InteractKey = false;
+                    canMove = true;
+                    deathNote.gameObject.SetActive(false);
+                    noteOpen = false;
+                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
                 }
+            }
 
-                if (Interactable != null && InteractKey == true)
-                {
-
-                    interact();
-                }
+            if (WaitTime > ElapsedTime)
+            { 
+                ElapsedTime += Time.deltaTime;
+            }
+            else
+            { 
+                InteractKey = false;
             }
         }
         void interact()
@@ -184,10 +198,21 @@ public class PlayerBehavior : MonoBehaviour
             ESprite.SetActive(true);
             isOnBillBoard = true;
         }
+
+        if (coll.gameObject.CompareTag("DeathNote"))
+        {
+            ESprite.SetActive(true);
+            isOnNote = true;
+        }
+
+        if (coll.gameObject.CompareTag("RevealRoom"))
+        {
+            coll.gameObject.SetActive(false);
+        }
         if (coll.gameObject.CompareTag("MissingPoster"))
         {
             isOnPoster = true;
-
+            ESprite.SetActive(true);
         }
         else if (coll.gameObject.CompareTag("Yamamba"))
         {
@@ -224,12 +249,17 @@ public class PlayerBehavior : MonoBehaviour
         if (coll.gameObject.CompareTag("MissingPoster") && posterOpen == true)
         {
             isOnPoster = false;
-          
+            ESprite.SetActive(false);
             poster.SetActive(false);
             posterOpen = false;
             lantern = true;
             laternLight.SetActive(true);
             Destroy(tableLatern);
+        }
+        if (coll.gameObject.CompareTag("MissingPoster") && posterOpen == false)
+        { 
+            isOnPoster = false; 
+            ESprite.SetActive(false);
         }
         isOnBillBoard = false;
         isOnPoster = false;

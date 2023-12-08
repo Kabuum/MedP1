@@ -153,24 +153,56 @@ public class Enemy : MonoBehaviour
     {
         if (Monster)
         {
-            switch (direction)
+            if (PlayerSpotted)
             {
-                case 1:
-                    EnemyAnimator.Play("Yamauba-Walk-Right");
-                    triScript.UpdateDetectionAngle(90);
-                    break;
-                case 2:
-                    EnemyAnimator.Play("Yamauba-Walk-Left");
-                    triScript.UpdateDetectionAngle(270);
-                    break;
-                case 3:
-                    EnemyAnimator.Play("Yamauba-Walk-Up");
-                    triScript.UpdateDetectionAngle(180);
-                    break;
-                case 4:
-                    EnemyAnimator.Play("Yamauba-Walk-Down");
-                    triScript.UpdateDetectionAngle(0);
-                    break;
+                switch (direction)
+                { case 1:
+                        EnemyAnimator.speed = 2;
+                        EnemyAnimator.Play("Yamauba-Walk-Right");
+                        triScript.UpdateDetectionAngle(90);
+                        break;
+                    case 2: 
+                        EnemyAnimator.speed = 2;
+                        EnemyAnimator.Play("Yamauba-Walk-Left");
+                        triScript.UpdateDetectionAngle(270);
+                        break;
+                    case 3: 
+                        EnemyAnimator.speed = 2;
+                        EnemyAnimator.Play("Yamauba-Walk-Up");
+                        triScript.UpdateDetectionAngle(180);
+                        break;
+                    case 4: 
+                        EnemyAnimator.speed = 2;
+                        EnemyAnimator.Play("Yamauba-Walk-Down");
+                        triScript.UpdateDetectionAngle(0);
+                        break;
+                }
+            }
+            else
+            {
+                switch (direction)
+                {
+                    case 1:
+                        EnemyAnimator.speed = 1;
+                        EnemyAnimator.Play("Yamauba-Walk-Right");
+                        triScript.UpdateDetectionAngle(90);
+                        break;
+                    case 2:
+                        EnemyAnimator.speed = 1;
+                        EnemyAnimator.Play("Yamauba-Walk-Left");
+                        triScript.UpdateDetectionAngle(270);
+                        break;
+                    case 3:
+                        EnemyAnimator.speed = 1;
+                        EnemyAnimator.Play("Yamauba-Walk-Up");
+                        triScript.UpdateDetectionAngle(180);
+                        break;
+                    case 4:
+                        EnemyAnimator.speed = 1;
+                        EnemyAnimator.Play("Yamauba-Walk-Down");
+                        triScript.UpdateDetectionAngle(0);
+                        break;
+                }
             }
         }
         else if (Lantern)
