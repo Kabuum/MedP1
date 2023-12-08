@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 195686325}
   m_Layer: 0
   m_Name: lantern
-  m_TagString: Untagged
+  m_TagString: MissingPoster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,8 +532,11 @@ MonoBehaviour:
   ESprite: {fileID: 2057514297}
   canMove: 0
   billboard: {fileID: 0}
+  poster: {fileID: 1926093790}
   GameManager: {fileID: 1449358801}
+  tableLatern: {fileID: 195686322}
   Yamamba: {fileID: 906541211}
+  laternLight: {fileID: 1075173795}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -4984,7 +4987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1926093791
 Transform:
   m_ObjectHideFlags: 0
