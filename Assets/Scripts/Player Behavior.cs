@@ -52,8 +52,6 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("interkey" + InteractKey);
-
         deltaspeed = speed * Time.deltaTime;
 
 
