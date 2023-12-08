@@ -63,8 +63,7 @@ public class CutSceneStuff : MonoBehaviour
         enemy.GetComponent<Enemy>().animated = true;
         enemy.GetComponent<Enemy>().transformationDone = false;
         enemy.GetComponent<Enemy>().TransformToMonster();
-
-        yield return new WaitUntil(() => enemy.GetComponent<Enemy>().transformationDone == true);
+        yield return new WaitForSeconds(4);
         enemy.GetComponent<Enemy>().animated = false;
         Move(new Vector2(-1.57f, 6.38f), true, false);
         yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, new Vector2(-1.57f, 6.38f)) <= 0.5f);

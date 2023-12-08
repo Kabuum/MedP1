@@ -46,6 +46,7 @@ public class PlayerBehavior : MonoBehaviour
     bool billboardOpen = false;
     public GameObject deathNote;
     public GameObject laternLight;
+    private bool yamaubavisited = false;
 
 
     // Start is called before the first frame update
@@ -158,7 +159,11 @@ public class PlayerBehavior : MonoBehaviour
                     canMove = true;
                     deathNote.gameObject.SetActive(false);
                     noteOpen = false;
-                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
+                    if (yamaubavisited == false)
+                    {
+                        StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
+                        yamaubavisited = true;
+                    }
                 }
             }
 
@@ -169,25 +174,6 @@ public class PlayerBehavior : MonoBehaviour
             else
             { 
                 InteractKey = false;
-            }
-        }
-        void interact()
-        {
-            if (Interactable.CompareTag("Key1"))
-            {
-
-            }
-            else if (Interactable.CompareTag("Key2"))
-            {
-
-            }
-            else if (Interactable.CompareTag("Crowbar"))
-            {
-
-            }
-            else if (Interactable.CompareTag("Hiding Range"))
-            {
-
             }
         }
     }
@@ -259,6 +245,12 @@ public class PlayerBehavior : MonoBehaviour
         if (coll.gameObject.CompareTag("MissingPoster") && posterOpen == false)
         { 
             isOnPoster = false; 
+            ESprite.SetActive(false);
+        }
+
+        if (coll.gameObject.CompareTag("DeathNote"))
+        {
+            isOnNote = false;
             ESprite.SetActive(false);
         }
         isOnBillBoard = false;

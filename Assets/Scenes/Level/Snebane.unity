@@ -335,8 +335,12 @@ MonoBehaviour:
   ESprite: {fileID: 2057514297}
   canMove: 0
   billboard: {fileID: 709921810}
+  poster: {fileID: 0}
   GameManager: {fileID: 1449358801}
+  tableLatern: {fileID: 0}
   Yamamba: {fileID: 906541211}
+  deathNote: {fileID: 0}
+  laternLight: {fileID: 0}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -5707,6 +5711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &526047865
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,6 +5791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &590345029
 Transform:
   m_ObjectHideFlags: 0
@@ -5846,6 +5852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &654374141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,6 +5898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &709921810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: cd89a525922f6da469c63a3ec832e1af, type: 3}
@@ -6081,11 +6089,14 @@ MonoBehaviour:
   PlayerSpotted: 0
   Player: {fileID: 230440568}
   runspeed: 1
-  walkspeed: 0.5
+  walkspeed: 0.8
   Monster: 0
   Lantern: 1
   animated: 0
   dontFollow: 0
+  Transformation: 0
+  TransformIsDone: 0
+  IsTransforming: 0
   openDoor:
     m_PersistentCalls:
       m_Calls:
@@ -6138,6 +6149,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triScript: {fileID: 1203806602}
+  transformationDone: 0
 --- !u!195 &906541213
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6389,6 +6401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &974950124
 Transform:
   m_ObjectHideFlags: 0
@@ -7349,6 +7362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &1321834184
 Transform:
   m_ObjectHideFlags: 0
@@ -7430,6 +7444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 906541211}
   player: {fileID: 230440567}
+  camera: {fileID: 0}
   dialogueController: {fileID: 1449358802}
   isWalking: 0
 --- !u!1 &1568250279
@@ -7577,6 +7592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &1582451745
 Transform:
   m_ObjectHideFlags: 0
@@ -15887,6 +15903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &1880302411
 GameObject:
   m_ObjectHideFlags: 0

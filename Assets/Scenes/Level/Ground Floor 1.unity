@@ -236,8 +236,12 @@ MonoBehaviour:
   ESprite: {fileID: 2057514297}
   canMove: 0
   billboard: {fileID: 0}
+  poster: {fileID: 0}
   GameManager: {fileID: 0}
+  tableLatern: {fileID: 0}
   Yamamba: {fileID: 0}
+  deathNote: {fileID: 0}
+  laternLight: {fileID: 0}
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -1159,6 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &476069506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &590345029
 Transform:
   m_ObjectHideFlags: 0
@@ -1587,6 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &654374141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,6 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &730918803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2083,9 @@ MonoBehaviour:
   Lantern: 0
   animated: 0
   dontFollow: 0
+  Transformation: 0
+  TransformIsDone: 0
+  IsTransforming: 0
   openDoor:
     m_PersistentCalls:
       m_Calls:
@@ -2272,8 +2283,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.987, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2114161997}
+  m_Children: []
   m_Father: {fileID: 906541215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &939892910
@@ -2379,6 +2389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &974950124
 Transform:
   m_ObjectHideFlags: 0
@@ -3227,6 +3238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &1321834184
 Transform:
   m_ObjectHideFlags: 0
@@ -3241,6 +3253,83 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 906541215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1326987013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326987015}
+  - component: {fileID: 1326987014}
+  m_Layer: 0
+  m_Name: Square (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1326987014
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326987013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1326987015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326987013}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.493, y: 5.542, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352413464
 GameObject:
@@ -3473,6 +3562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 906541211}
   player: {fileID: 230440567}
+  camera: {fileID: 0}
   dialogueController: {fileID: 1449358802}
   isWalking: 0
 --- !u!114 &1449358805
@@ -3824,6 +3914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!4 &1582451745
 Transform:
   m_ObjectHideFlags: 0
@@ -5763,6 +5854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorTileMap: {fileID: 365686164}
+  doorSound: {fileID: 0}
 --- !u!1 &1880302411
 GameObject:
   m_ObjectHideFlags: 0
@@ -6343,88 +6435,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2114161996
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2114161997}
-  - component: {fileID: 2114161998}
-  m_Layer: 0
-  m_Name: Light 2D (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2114161997
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114161996}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 939892909}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2114161998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114161996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ComponentVersion: 1
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0, b: 0.14640236, a: 1}
-  m_Intensity: 1
-  m_LightVolumeIntensity: 0.1
-  m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: -3150417103705471851, guid: 488677eea8a046f40b9e1ffbeb254c1e, type: 3}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 5
-  m_NormalMapQuality: 0
-  m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.693
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 359.99997
-  m_PointLightOuterAngle: 359.99997
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -2, y: -2, z: 0}
-  - {x: 2.2297063, y: -1.444441, z: 0}
-  - {x: 1.200372, y: 2.5162222, z: 0}
-  - {x: -2, y: 0, z: 0}
 --- !u!1 &2135440409
 GameObject:
   m_ObjectHideFlags: 0
@@ -7860,3 +7870,4 @@ SceneRoots:
   - {fileID: 730918805}
   - {fileID: 1424955557}
   - {fileID: 899200028}
+  - {fileID: 1326987015}
