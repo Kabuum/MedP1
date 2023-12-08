@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -21,6 +22,9 @@ public class Enemy : MonoBehaviour
     public bool Lantern = false;
     public bool animated = false;
     public bool dontFollow;
+    public bool Transformation = false;
+    public bool TransformIsDone = false;
+    public bool IsTransforming;
 
     public UnityEvent openDoor;
 
@@ -66,7 +70,22 @@ public class Enemy : MonoBehaviour
         }
 
         Vector3 AgentVel = agent.velocity;
-        if (Mathf.Abs(AgentVel.x) < 0.001f && Mathf.Abs(AgentVel.y) < 0.001f)
+        if (IsTransforming)
+        {
+            if (EnemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
+            {
+                Transformation = false;
+                IsTransforming = false;
+                TransformIsDone = true;
+            }
+        }
+        else if (Transformation)
+        {
+            IsTransforming = true;
+            EnemyAnimator.Play("Yamauba-Transformation");
+            Monster = true;
+        }
+        else if (Mathf.Abs(AgentVel.x) < 0.001f && Mathf.Abs(AgentVel.y) < 0.001f)
         {
             if (Lantern)
             {
