@@ -46,7 +46,10 @@ public class PlayerBehavior : MonoBehaviour
     bool billboardOpen = false;
     public GameObject deathNote;
     public GameObject laternLight;
+    public GameObject groundFloorBefore;
+    public GameObject groundFloorAfter;
     private bool yamaubavisited = false;
+    private bool youDied;
 
 
     // Start is called before the first frame update
@@ -72,6 +75,13 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (PlayerAnimator.GetCurrentAnimatorStateInfo(0).IsName("DeathDone"))
+        {
+            SceneMangment.RestartScene();
+            
+            //SceneMangment.LoadScene(7);
+        }
         if (Input.GetKeyDown(KeyCode.J))
         {
             StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
@@ -163,6 +173,8 @@ public class PlayerBehavior : MonoBehaviour
                     {
                         StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
                         yamaubavisited = true;
+                        groundFloorBefore.SetActive(false);
+                        groundFloorAfter.SetActive(true);
                     }
                 }
             }
@@ -204,7 +216,10 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (coll.gameObject.GetComponent<Enemy>().dontFollow == false)
             {
-                SceneMangment.RestartScene();
+                Yamamba.SetActive(false);
+                youDied = true;
+                canMove = false;
+                PlayerAnimator.Play("Death");
             }
         }
     }
@@ -214,7 +229,6 @@ public class PlayerBehavior : MonoBehaviour
         {
             Hidden = true;
             myColor = new Color(1f, 1f, 1f, 0.2f);
-            Debug.Log("Hidden");
             Renderer.material.color = myColor;
         }
         if (Input.GetKeyDown(KeyCode.E) && coll.gameObject.CompareTag("Doors"))
@@ -224,11 +238,15 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Billboard"))
+        {
+            isOnBillBoard = false;
+            ESprite.SetActive(false);
+        }
 
         if (coll.gameObject.CompareTag("HidingRange") && Hidden == true)
         {
             Hidden = false;
-            Debug.Log("Not Hidden");
             myColor = new Color(1f, 1f, 1f, 1f);
             Renderer.material.color = myColor;
         }
@@ -261,83 +279,87 @@ public class PlayerBehavior : MonoBehaviour
         Destroy(door.GetComponent<BoxCollider2D>());
         Debug.Log("Door Open");
     }
+
     void PlayAnim(int direction, bool isMoving, bool lanternOn)
     {
-        if (isMoving == true)
+        if (!youDied)
         {
-            if (lanternOn)
+            if (isMoving == true)
             {
-                switch (direction)
+                if (lanternOn)
                 {
-                    case 1:
-                        PlayerAnimator.Play("PriestLantern-Walk-Left");
-                        break;
-                    case 2:
-                        PlayerAnimator.Play("PriestLantern-Walk-Right");
-                        break;
-                    case 3:
-                        PlayerAnimator.Play("PriestLantern-Walk-Down");
-                        break;
-                    case 4:
-                        PlayerAnimator.Play("PriestLantern-Walk-Up");
-                        break;
+                    switch (direction)
+                    {
+                        case 1:
+                            PlayerAnimator.Play("PriestLantern-Walk-Left");
+                            break;
+                        case 2:
+                            PlayerAnimator.Play("PriestLantern-Walk-Right");
+                            break;
+                        case 3:
+                            PlayerAnimator.Play("PriestLantern-Walk-Down");
+                            break;
+                        case 4:
+                            PlayerAnimator.Play("PriestLantern-Walk-Up");
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (direction)
+                    {
+                        case 1:
+                            PlayerAnimator.Play("Priest-Walk-Left");
+                            break;
+                        case 2:
+                            PlayerAnimator.Play("Priest-Walk-Right");
+                            break;
+                        case 3:
+                            PlayerAnimator.Play("Priest-Walk-Down");
+                            break;
+                        case 4:
+                            PlayerAnimator.Play("Priest-Walk-Up");
+                            break;
+                    }
                 }
             }
             else
             {
-                switch (direction)
+                if (lanternOn)
                 {
-                    case 1:
-                        PlayerAnimator.Play("Priest-Walk-Left");
-                        break;
-                    case 2:
-                        PlayerAnimator.Play("Priest-Walk-Right");
-                        break;
-                    case 3:
-                        PlayerAnimator.Play("Priest-Walk-Down");
-                        break;
-                    case 4:
-                        PlayerAnimator.Play("Priest-Walk-Up");
-                        break;
+                    switch (direction)
+                    {
+                        case 1:
+                            PlayerAnimator.Play("PriestLantern-Left");
+                            break;
+                        case 2:
+                            PlayerAnimator.Play("PriestLantern-Right");
+                            break;
+                        case 3:
+                            PlayerAnimator.Play("PriestLantern-Down");
+                            break;
+                        case 4:
+                            PlayerAnimator.Play("PriestLantern-Up");
+                            break;
+                    }
                 }
-            }
-        }
-        else
-        {
-            if (lanternOn)
-            {
-                switch (direction)
+                else
                 {
-                    case 1:
-                        PlayerAnimator.Play("PriestLantern-Left");
-                        break;
-                    case 2:
-                        PlayerAnimator.Play("PriestLantern-Right");
-                        break;
-                    case 3:
-                        PlayerAnimator.Play("PriestLantern-Down");
-                        break;
-                    case 4:
-                        PlayerAnimator.Play("PriestLantern-Up");
-                        break;
-                }
-            }
-            else
-            {
-                switch (direction)
-                {
-                    case 1:
-                        PlayerAnimator.Play("Priest-Left");
-                        break;
-                    case 2:
-                        PlayerAnimator.Play("Priest-Right");
-                        break;
-                    case 3:
-                        PlayerAnimator.Play("Priest-Down");
-                        break;
-                    case 4:
-                        PlayerAnimator.Play("Priest-Up");
-                        break;
+                    switch (direction)
+                    {
+                        case 1:
+                            PlayerAnimator.Play("Priest-Left");
+                            break;
+                        case 2:
+                            PlayerAnimator.Play("Priest-Right");
+                            break;
+                        case 3:
+                            PlayerAnimator.Play("Priest-Down");
+                            break;
+                        case 4:
+                            PlayerAnimator.Play("Priest-Up");
+                            break;
+                    }
                 }
             }
         }
