@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/Cellar.unity
     guid: 1a57a87dfd52ad1408161eacfe0e8d5d
+  - enabled: 1
+    path: Assets/Scenes/Level/Ground Floor 3.unity
+    guid: 716f57c50127c664e8610c310a0a4c95
+  - enabled: 1
+    path: Assets/Scenes/Level/Upper Floor.unity
+    guid: d035c2d2f1e74ec44ada00001373eef1
+  - enabled: 1
+    path: Assets/Scenes/Level/Ground Floor 4.unity
+    guid: 2ed472d987e32204a950fa94c21f7a8d
   m_configObjects: {}

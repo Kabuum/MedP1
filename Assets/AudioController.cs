@@ -24,13 +24,17 @@ public class AudioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(Yamamba.transform.position, player.transform.position) < 2f)
+        if (Yamamba.GetComponent<Enemy>().PlayerSpotted == true)
         {
             ClipIndex = 3;
         }
-        else if (Vector3.Distance(Yamamba.transform.position, player.transform.position) < 4f)
+        else if (Vector3.Distance(Yamamba.transform.position, player.transform.position) < 2f)
         {
             ClipIndex = 2;
+        }
+        else if (Vector3.Distance(Yamamba.transform.position, player.transform.position) < 4f)
+        {
+            ClipIndex = 1;
         }
         else if (Vector3.Distance(Yamamba.transform.position, player.transform.position) < 6f)
         {

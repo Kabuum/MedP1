@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class Enemy : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
     public bool Transformation = false;
     public bool TransformIsDone = false;
     public bool IsTransforming;
+    public Vector3 leaveSpot = new Vector3(1000, 1000, 0);
 
     public UnityEvent openDoor;
 
@@ -46,6 +48,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(transform.position,leaveSpot) <= 0.05f)
+        {
+            gameObject.SetActive(false);
+        }
         if (dontFollow == false)
         {
             PlayerSpotted = triScript.CheckInSight();

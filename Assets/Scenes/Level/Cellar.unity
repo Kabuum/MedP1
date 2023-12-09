@@ -1694,7 +1694,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5754789288982508232, guid: 2b154a20e6c402945bcbf527fd5be4e2, type: 3}
       propertyPath: levelSceneIndex
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7477230716726466211, guid: 2b154a20e6c402945bcbf527fd5be4e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1943,6 +1943,7 @@ MonoBehaviour:
   Transformation: 0
   TransformIsDone: 0
   IsTransforming: 0
+  leaveSpot: {fileID: 0}
   openDoor:
     m_PersistentCalls:
       m_Calls:
