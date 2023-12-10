@@ -58,6 +58,7 @@ public class PlayerBehavior : MonoBehaviour
     private bool onTools = false;
     private bool gotTools;
     private bool onDrawer;
+    private bool onBed;
 
 
     // Start is called before the first frame update
@@ -133,6 +134,10 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (onBed)
+            {
+                StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("Something doesn't feel right... Maybe I should check the back door despite what that old lady said"));
+            }
             if (onDrawer)
             {
                 if (gotTools)
@@ -233,6 +238,11 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Bed"))
+        {
+            ESprite.SetActive(true);
+            onBed = true;
+        }
         if (coll.gameObject.CompareTag("Drawer"))
         {
             ESprite.SetActive(true);
@@ -295,6 +305,11 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Bed"))
+        {
+            ESprite.SetActive(false);
+            onBed = false;
+        }
         if (coll.gameObject.CompareTag("Drawer"))
         {
             ESprite.SetActive(false);

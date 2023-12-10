@@ -40,7 +40,7 @@ public class DialogueController : MonoBehaviour
     public IEnumerator ShowDialogue(KeyCode key, string text, int maxChar)
     {
         int i = 0;
-        textSpeech.text = "T";
+        textSpeech.text = "";
         string[] words = text.Split(" ");
         for (i = 0; i < words.Length; i++)
         {

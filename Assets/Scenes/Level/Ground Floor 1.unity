@@ -235,6 +235,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   ESprite: {fileID: 2057514297}
+  NormalMusic: {fileID: 0}
+  TenseMusic: {fileID: 0}
   canMove: 0
   billboard: {fileID: 0}
   poster: {fileID: 0}
@@ -245,6 +247,9 @@ MonoBehaviour:
   laternLight: {fileID: 0}
   groundFloorBefore: {fileID: 0}
   groundFloorAfter: {fileID: 0}
+  UpperfloorTools: {fileID: 0}
+  yamaubavisited: 0
+  KeyReceived: 0
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -1183,7 +1188,7 @@ GameObject:
   - component: {fileID: 476069508}
   m_Layer: 0
   m_Name: Staircases (2)
-  m_TagString: Staircase to cellar 1
+  m_TagString: Bed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

@@ -56,6 +56,7 @@ public class CutSceneStuff : MonoBehaviour
     public IEnumerator Cut4()
     {
         enemy.SetActive(true);
+        Talk("Where did that little priest go I'M GOING TO RIP HIM APART WHEN I FIND HIM",true);
         camera.GetComponent<CamScript>().followYamauba = true;
         Move(new Vector2(-1f, 0f), false, false);
         yield return new WaitUntil(() => Vector2.Distance(enemy.transform.position, new Vector2(-1f, 0f)) <= 0.5f);
