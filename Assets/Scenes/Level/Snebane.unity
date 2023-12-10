@@ -333,6 +333,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   ESprite: {fileID: 2057514297}
+  NormalMusic: {fileID: 0}
+  TenseMusic: {fileID: 0}
   canMove: 0
   billboard: {fileID: 709921810}
   poster: {fileID: 0}
@@ -341,6 +343,11 @@ MonoBehaviour:
   Yamamba: {fileID: 906541211}
   deathNote: {fileID: 0}
   laternLight: {fileID: 0}
+  groundFloorBefore: {fileID: 0}
+  groundFloorAfter: {fileID: 0}
+  UpperfloorTools: {fileID: 0}
+  yamaubavisited: 0
+  KeyReceived: 0
 --- !u!50 &230440572
 Rigidbody2D:
   serializedVersion: 4
@@ -6097,6 +6104,7 @@ MonoBehaviour:
   Transformation: 0
   TransformIsDone: 0
   IsTransforming: 0
+  leaveSpot: {x: 1000, y: 1000, z: 0}
   openDoor:
     m_PersistentCalls:
       m_Calls:
@@ -7481,7 +7489,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
