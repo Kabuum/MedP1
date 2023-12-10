@@ -86,7 +86,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (PlayerAnimator.GetCurrentAnimatorStateInfo(0).IsName("DeathDone"))
         {
-            SceneMangment.LoadScene(9);
+            //SceneMangment.LoadScene(9); //Death Scene needs to restart right level
+            SceneMangment.RestartScene();
         }
         if (Input.GetKeyDown(KeyCode.J))
         {

@@ -6507,7 +6507,7 @@ MonoBehaviour:
   - {fileID: 199923386}
   PlayerSpotted: 0
   Player: {fileID: 230440568}
-  runspeed: 1.2
+  runspeed: 1.4
   walkspeed: 0.5
   Monster: 1
   Lantern: 0
