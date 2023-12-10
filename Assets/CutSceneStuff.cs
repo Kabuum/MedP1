@@ -71,9 +71,9 @@ public class CutSceneStuff : MonoBehaviour
         enemy.SetActive(false);
         yield break;
     }
-    public IEnumerator Cut5()
+    public IEnumerator Cut5(string TextLine) //call this coroutine for any just text prompt you wanna pull up on a homie with.
     {
-        Talk("bruh", false);
+        Talk(TextLine, true);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
         yield break;
     }

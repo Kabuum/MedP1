@@ -48,8 +48,13 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject laternLight;
     public GameObject groundFloorBefore;
     public GameObject groundFloorAfter;
-    private bool yamaubavisited = false;
+    public GameObject UpperfloorTools;
+    public bool yamaubavisited = false;
     private bool youDied;
+    private bool KeyReceived;
+    private bool onDoor = false;
+    private bool onTools = false;
+    private bool gotTools;
 
 
     // Start is called before the first frame update
@@ -128,7 +133,28 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            
+            if (onTools)
+            {
+                StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("These tools might be useful"));
+                UpperfloorTools.SetActive(false);
+                gotTools = true;
+            }
+            if (onDoor)
+            {
+                if (KeyReceived)
+                {
+                    //load outside scene
+                }
+                else if (yamaubavisited)
+                {
+                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("The door is locked. The Note said I should look upstairs"));
+                }
+                else
+                {
+                    
+                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("The door is locked..."));
+                }
+            }
             if (isOnBillBoard == true && billboardOpen == false)
             {
                 if (billboard.activeInHierarchy == true && billboardOpen == false)
@@ -191,6 +217,16 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Tools"))
+        {
+            ESprite.SetActive(true);
+            onTools = true;
+        }
+        if (coll.gameObject.CompareTag("FrontDoor"))
+        {
+            onDoor = true;
+            ESprite.SetActive(true);
+        }
         if (coll.gameObject.CompareTag("Billboard") && billboardOpen == false)
         {
             ESprite.SetActive(true);
@@ -238,6 +274,16 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Tools")) 
+        {
+            ESprite.SetActive(false); 
+            onTools = false;
+        }
+        if (coll.gameObject.CompareTag("FrontDoor"))
+        {
+            onDoor = false;
+            ESprite.SetActive(false);
+        }
         if (coll.gameObject.CompareTag("Billboard"))
         {
             isOnBillBoard = false;
