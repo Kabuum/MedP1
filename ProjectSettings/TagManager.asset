@@ -26,6 +26,8 @@ TagManager:
   - DeathNote
   - FrontDoor
   - Tools
+  - Drawer
+  - FinishLine
   layers:
   - Default
   - TransparentFX

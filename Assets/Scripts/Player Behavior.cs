@@ -25,6 +25,8 @@ public class PlayerBehavior : MonoBehaviour
     private bool moving = false;
     public UnityEvent openDoor;
     public GameObject ESprite;
+    public GameObject NormalMusic;
+    public GameObject TenseMusic;
 
     private Collider2D Interactable;
     public bool canMove = true;
@@ -51,10 +53,11 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject UpperfloorTools;
     public bool yamaubavisited = false;
     private bool youDied;
-    private bool KeyReceived;
+    public bool KeyReceived;
     private bool onDoor = false;
     private bool onTools = false;
     private bool gotTools;
+    private bool onDrawer;
 
 
     // Start is called before the first frame update
@@ -80,12 +83,9 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (PlayerAnimator.GetCurrentAnimatorStateInfo(0).IsName("DeathDone"))
         {
-            SceneMangment.RestartScene();
-            
-            //SceneMangment.LoadScene(7);
+            SceneMangment.LoadScene(9);
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -133,6 +133,22 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (onDrawer)
+            {
+                if (gotTools)
+                { 
+                    KeyReceived = true;
+                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("*You found a key* I should get out of here now!"));
+                    groundFloorAfter.SetActive(true);
+                    groundFloorBefore.SetActive(false);
+                    NormalMusic.SetActive(false);
+                    TenseMusic.SetActive(true);
+                }
+                else
+                {
+                    StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("This drawer is locked. Maybe a tool could open it"));
+                }
+            }
             if (onTools)
             {
                 StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut5("These tools might be useful"));
@@ -143,7 +159,7 @@ public class PlayerBehavior : MonoBehaviour
             {
                 if (KeyReceived)
                 {
-                    //load outside scene
+                    SceneMangment.LoadScene(8);
                 }
                 else if (yamaubavisited)
                 {
@@ -217,6 +233,11 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Drawer"))
+        {
+            ESprite.SetActive(true);
+            onDrawer = true;
+        }
         if (coll.gameObject.CompareTag("Tools"))
         {
             ESprite.SetActive(true);
@@ -274,6 +295,11 @@ public class PlayerBehavior : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
+        if (coll.gameObject.CompareTag("Drawer"))
+        {
+            ESprite.SetActive(false);
+            onDrawer = false;
+        }
         if (coll.gameObject.CompareTag("Tools")) 
         {
             ESprite.SetActive(false); 

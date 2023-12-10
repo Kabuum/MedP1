@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/Ground Floor 4.unity
     guid: 2ed472d987e32204a950fa94c21f7a8d
+  - enabled: 1
+    path: Assets/Scenes/Level/Ground Floor GOT KEY.unity
+    guid: 1b3547002a8223149b697c1dd440d62e
+  - enabled: 1
+    path: Assets/Scenes/Level/Snebane ENDING.unity
+    guid: f7d474b48de30274b904e64a3334ed09
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: f6075d5fe3fa66c4b8644ce0e3943ef7
   m_configObjects: {}

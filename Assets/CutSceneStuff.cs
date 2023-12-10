@@ -75,6 +75,7 @@ public class CutSceneStuff : MonoBehaviour
     {
         Talk(TextLine, true);
         yield return new WaitWhile(() => dialogueController.dialogDone == false);
+        enemy.GetComponent<Enemy>().animated = false;
         yield break;
     }
 
