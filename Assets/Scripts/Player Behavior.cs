@@ -23,7 +23,6 @@ public class PlayerBehavior : MonoBehaviour
     private int directionindex = 3;
     public bool lantern = false;
     private bool moving = false;
-    public UnityEvent openDoor;
     public GameObject ESprite;
     public GameObject NormalMusic;
     public GameObject TenseMusic;
@@ -88,10 +87,6 @@ public class PlayerBehavior : MonoBehaviour
         {
             //SceneMangment.LoadScene(9); //Death Scene needs to restart right level
             SceneMangment.RestartScene();
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            StartCoroutine(GameManager.GetComponent<CutSceneStuff>().Cut4());
         }
         deltaspeed = speed * Time.deltaTime;
         if (billboard == null || billboard.activeInHierarchy == false)

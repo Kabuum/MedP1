@@ -28,8 +28,6 @@ public class Enemy : MonoBehaviour
     public bool IsTransforming;
     public Vector3 leaveSpot = new Vector3(1000, 1000, 0);
 
-    public UnityEvent openDoor;
-
     public DetectionTriangle triScript;
     public bool transformationDone;
 
