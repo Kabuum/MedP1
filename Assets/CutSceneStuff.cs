@@ -9,10 +9,7 @@ public class CutSceneStuff : MonoBehaviour
     public GameObject player;
     public GameObject camera;
     public DialogueController dialogueController;
-    public List<IEnumerator> events = new List<IEnumerator>();
-
     public bool isWalking;
-
     public IEnumerator Cut1()
     {
         //f�rdig
@@ -74,7 +71,6 @@ public class CutSceneStuff : MonoBehaviour
         enemy.GetComponent<Enemy>().animated = false;
         yield break;
     }
-
     public void Move(Vector2 target, bool playerMove, bool instant)
     {
         if (enemy.GetComponent<NavMeshAgent>() != null)

@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
-    public Event DialogueEvent;
-    public GameObject textBack;
     public GameObject spacebar;
     public GameObject dialogField;
     public TMP_Text textSpeech;
 
-   // public string text;
     public int maxChar;
     public bool dialogDone = false;
     public float charDelay;
@@ -19,7 +16,6 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         dialogField.SetActive(false);
-        
     }
     public void OpenDialog(string text)
     {
@@ -35,7 +31,6 @@ public class DialogueController : MonoBehaviour
         string[] words = text.Split(" ");
         for (i = 0; i < words.Length; i++)
         {
-         //   Debug.Log(words[i]);
             if (textSpeech.text.Length + words[i].Length <= maxChar)
             {
                 char[] chars = words[i].ToCharArray();
