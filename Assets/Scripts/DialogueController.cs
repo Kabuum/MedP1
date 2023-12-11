@@ -1,16 +1,7 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Threading;
 using TMPro;
-using Unity.Collections.LowLevel.Unsafe;
-using UnityEditor;
-using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
