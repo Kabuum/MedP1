@@ -254,11 +254,4 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    private void OnTriggerStay2D(Collider2D Coll)
-    {
-        if (Coll.gameObject.CompareTag("Doors"))
-        {
-            openDoor.Invoke();
-        }
-    }
 }

@@ -294,10 +294,6 @@ public class PlayerBehavior : MonoBehaviour
             myColor = new Color(1f, 1f, 1f, 0.2f);
             Renderer.material.color = myColor;
         }
-        if (Input.GetKeyDown(KeyCode.E) && coll.gameObject.CompareTag("Doors"))
-        {
-            openDoor.Invoke();
-        }
     }
     private void OnTriggerExit2D(Collider2D coll)
     {

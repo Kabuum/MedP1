@@ -10,7 +10,6 @@ public class DoorOpenerScript : MonoBehaviour
     public GameObject Yamauba;
     public AudioSource DoorSFX;
     public GameObject Door;
-    private bool onDoor;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +26,12 @@ public class DoorOpenerScript : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
-            onDoor = true;
             Door.SetActive(false);
             DoorSFX.Play();
             this.GetComponent<TilemapRenderer>().enabled = false;
         }
         else if (coll.gameObject.CompareTag("Yamamba"))
         {
-            onDoor = true;
             Door.SetActive(false);
             DoorSFX.Play();
             this.GetComponent<TilemapRenderer>().enabled = false;
@@ -44,13 +41,11 @@ public class DoorOpenerScript : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
-            onDoor = false;
             Door.SetActive(true);
             this.GetComponent<TilemapRenderer>().enabled = true;
         }
         else if (coll.gameObject.CompareTag("Yamamba"))
         {
-            onDoor = false;
             Door.SetActive(true);
             this.GetComponent<TilemapRenderer>().enabled = true;
         }
